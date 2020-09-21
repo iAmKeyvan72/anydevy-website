@@ -76,7 +76,6 @@ $(window).on("resize scroll", function () {
   }
 
   if ($(".ourTeam-section").isInViewport()) {
-    console.log("helol");
     let i = 0;
 
     const interval = setInterval(() => {
@@ -140,48 +139,92 @@ $(".V_slider").slick({
   },
 });
 
-new Splide('#mobile-splide', {
-  type: 'loop',
-  perPage: 3,
-  focus: 'center',
-  arrows: false,
-  pagination: false,
-  easing: 'ease',
-  padding: {
-    right: '5rem',
-    left: '5rem',
-  },
-}).mount();
+// third section carousel
 
-new Splide('#othersSiad-splide', {
-  type: 'loop',
-  perPage: 2,
-  arrows: false,
-  pagination: false,
-  easing: 'ease',
-  gap: '5rem'
-}).mount();
+$('.website-carousel').owlCarousel({
+  rtl: true,
+  items: 3,
+  loop: true,
+  margin: 10,
+  nav: false,
+  dots: false,
+  onDragged: callback
+})
+function callback(event) {
+  // Provided by the core
+  var item = event.item.index;
+  let src = $(`.website-carousel .owl-item`).eq(item - 1).children(".website-img").children("img").attr("src");
+  $("#larger-img").attr("src", src);
+  $("#web-title").text($(`.website-carousel .owl-item`).eq(item - 1).children(".website-img").attr("data-webName"));
+  $("#web-year").text($(`.website-carousel .owl-item`).eq(item - 1).children(".website-img").attr("data-year"));
+}
 
-var webSplide = new Splide('#website-splide', {
-  type: 'loop',
-  perPage: 4,
-  perMove: 1,
-  arrows: false,
-  autoWidth: true,
-  direction: 'rtl',
-  pagination: false,
-  easing: 'ease',
-}).mount();
+// End third section carousel
 
-webSplide.on('moved', function (newIndex) {
-  $("#website-title").text("")
-  $("#website-year").text("")
-  let title = $(`#website-splide li`).eq(newIndex).attr("data-webName");
-  let year = $(`#website-splide li`).eq(newIndex).attr("data-year");
-  console.log(title, year)
-  $("#web-title").text(title)
-  $("#web-year").text(year)
+// mobile section carousel
+var count = $('.mobile-carousel').children(".mobile-app-item").length;
+$('.mobile-carousel').owlCarousel({
+  loop: true,
+  margin: 10,
+  items: 5,
+  stagePadding: 40,
+  center: true,
+  nav: false,
+  dots: false,
+  responsiveClass: true,
+  responsive: {
+    800: {
+      items: 3
+    },
+    1024: {
+      items: 3
+    },
+    1200: {
+      items: 5
+    }
+  }
+})
+
+$('.mobile-carousel').on('mousewheel', '.owl-stage', function (e) {
+  if (count > 0) {
+    if (e.deltaY > 0) {
+      $('.mobile-carousel').trigger('next.owl');
+    } else {
+      $('.mobile-carousel').trigger('prev.owl');
+    }
+    e.preventDefault();
+    count--;
+  }
 });
+
+// End mobile section carousel
+
+// comments section carousel
+
+$('.comments-carousel').on('initialized.owl.carousel', function (event) {
+  let current = event.item.index;
+  $(`.comments-carousel .comment-box`).eq(current - 1).removeClass("commentsTransform")
+  $(`.comments-carousel .comment-box`).eq(current).addClass("commentsTransform")
+});
+
+$('.comments-carousel').owlCarousel({
+  loop: true,
+  items: 2,
+  margin: 100,
+  nav: false,
+  dots: false,
+  onDragged: commentsCallback
+})
+function commentsCallback(event) {
+  let current = event.item.index;
+  $(`.comments-carousel .comment-box`).eq(current - 1).removeClass("commentsTransform")
+  $(`.comments-carousel .comment-box`).eq(current).addClass("commentsTransform")
+  $(`.comments-carousel .comment-box`).eq(i - 1).removeClass("commentsTransform")
+  $(`.comments-carousel .comment-box`).eq(i).addClass("commentsTransform")
+}
+
+// End comments section carousel
+
 
 $(".V_slider").on("afterChange", function (event, slick, currentSlide) {
   $("#welcome-slider-text").text("");
@@ -200,8 +243,6 @@ $(".V_slider").on("afterChange", function (event, slick, currentSlide) {
     3000
   );
 });
-
-// end of slick configs
 
 // teamMate start
 

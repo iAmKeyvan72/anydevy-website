@@ -18,6 +18,15 @@
   }
 }
 
+@keyframes comments {
+  from{
+    transform: scale(0.8)
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
 .scale-in-center {
   -webkit-animation: scale-in-center 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94)
     both;

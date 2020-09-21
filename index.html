@@ -8,8 +8,8 @@
   <title>Document</title>
   <link rel="stylesheet" href="./assets/css/slick/slick.css" />
   <link rel="stylesheet" href="./assets/css/slick/slick-theme.css" />
-  <link rel="stylesheet" href="./assets/css/splide/splide.min.css" />
-  <link rel="stylesheet" href="./assets/css/splide/splide-core.min.css" />
+  <link rel="stylesheet" href="./assets/css/owlCarousel/owl.carousel.min.css" />
+  <link rel="stylesheet" href="./assets/css/owlCarousel/owl.theme.default.min.css" />
   <link rel="stylesheet" href="./assets/css/style.css" />
 </head>
 
@@ -134,99 +134,88 @@
 
     <section class="section third-section white-bg" data-before="WEBSITES">
       <div class="container">
-        <span class="small-circle"></span>
-        <span class="big-circle"></span>
-        <div id="website-splide" class="splide website-carousel">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide" data-webName="ad agency website" data-year="2016">
-                <div class="website-img">
-                  <img src="http://placehold.it/350x300?text=1">
-                </div>
-              </li>
-              <li class="splide__slide" data-webName="music website" data-year="2015">
-                <div class="website-img">
-                  <img src="http://placehold.it/350x300?text=2">
-                </div>
-              </li>
-              <li class="splide__slide" data-webName="shop website" data-year="2017">
-                <div class="website-img">
-                  <img src="http://placehold.it/350x300?text=3">
-                </div>
-              </li>
-              <li class="splide__slide" data-webName="medical website" data-year="2018">
-                <div class="website-img">
-                  <img src="http://placehold.it/350x300?text=4">
-                </div>
-              </li>
-              <li class="splide__slide" data-webName="sport website" data-year="2020">
-                <div class="website-img">
-                  <img src="http://placehold.it/350x300?text=5">
-                </div>
-              </li>
-              <li class="splide__slide" data-webName="bet website" data-year="2019">
-                <div class="website-img">
-                  <img src="http://placehold.it/350x300?text=6">
-                </div>
-              </li>
-            </ul>
+        <div class="third-section-left">
+          <span class="small-circle"></span>
+          <div class="website-carousel owl-carousel owl-theme">
+            <div class="website-img" data-webName="ad agency website" data-year="2016">
+              <img src="http://placehold.it/350x300?text=1">
+            </div>
+            <div class="website-img" data-webName="music website" data-year="2015">
+              <img src="http://placehold.it/350x300?text=2">
+            </div>
+            <div class="website-img" data-webName="shop website" data-year="2017">
+              <img src="http://placehold.it/350x300?text=3">
+            </div>
+            <div class="website-img" data-webName="medical website" data-year="2018">
+              <img src="http://placehold.it/350x300?text=4">
+            </div>
+            <div class="website-img" data-webName="sport website" data-year="2020">
+              <img src="http://placehold.it/350x300?text=5">
+            </div>
+            <div class="website-img" data-webName="bet website" data-year="2019">
+              <img src="http://placehold.it/350x300?text=6">
+            </div>
+          </div>
+
+          <div class="website-details">
+            <p class="website-title" id="web-title">Ad Agancy Website</p>
+            <p class="website-year" id="web-year">2016</p>
+
+            <div>
+              <a href="#" class="see-more">See all works</a>
+            </div>
           </div>
         </div>
 
-        <div class="website-details">
-          <p class="website-title" id="web-title">Ad Agancy Website</p>
-          <p class="website-year" id="web-year">2016</p>
-
-          <div>
-            <a href="#" class="see-more">See all works</a>
+        <div class="third-section-right">
+          <span class="big-circle"></span>
+          <div class="larger-image">
+            <img id="larger-img" src="http://placehold.it/350x300?text=6" alt="">
           </div>
         </div>
+
       </div>
 
 
     </section>
 
     <section class="section fourth-section dark-bg" data-before="MOBILE APP">
-      <div id="mobile-splide" class="splide mobile-carousel">
-        <div class="splide__track">
-          <ul class="splide__list">
-            <li class="splide__slide">
-              <div class="mobile-slider-items">
-                <p class="mobile-app-title">medical app</p>
-                <img src="./assets/images/mobile-image-mid.png" alt="" />
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="mobile-slider-items">
-                <p class="mobile-app-title">task manager app</p>
-                <img src="./assets/images/mobile-image-small.png" alt="" />
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="mobile-slider-items">
-                <p class="mobile-app-title">bet app</p>
-                <img src="./assets/images/mobile-image.png" alt="" />
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="mobile-slider-items">
-                <p class="mobile-app-title">football app</p>
-                <img src="./assets/images/mobile-image-small.png" alt="" />
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="mobile-slider-items">
-                <p class="mobile-app-title">social media app</p>
-                <img src="./assets/images/mobile-image-mid.png" alt="" />
-              </div>
-            </li>
-            <li class="splide__slide">
-              <div class="mobile-slider-items">
-                <p class="mobile-app-title">football app</p>
-                <img src="./assets/images/mobile-image.png" alt="" />
-              </div>
-            </li>
-          </ul>
+      <div class="mobile-carousel owl-carousel owl-theme">
+        <div class="mobile-app-item">
+          <div class="mobile-slider-items">
+            <p class="mobile-app-title">medical app</p>
+            <img src="./assets/images/mobile-image-mid.png" alt="" />
+          </div>
+        </div>
+        <div class="mobile-app-item">
+          <div class="mobile-slider-items">
+            <p class="mobile-app-title">task manager app</p>
+            <img src="./assets/images/mobile-image-small.png" alt="" />
+          </div>
+        </div>
+        <div class="mobile-app-item">
+          <div class="mobile-slider-items">
+            <p class="mobile-app-title">bet app</p>
+            <img src="./assets/images/mobile-image.png" alt="" />
+          </div>
+        </div>
+        <div class="mobile-app-item">
+          <div class="mobile-slider-items">
+            <p class="mobile-app-title">football app</p>
+            <img src="./assets/images/mobile-image-small.png" alt="" />
+          </div>
+        </div>
+        <div class="mobile-app-item">
+          <div class="mobile-slider-items">
+            <p class="mobile-app-title">social media app</p>
+            <img src="./assets/images/mobile-image-mid.png" alt="" />
+          </div>
+        </div>
+        <div class="mobile-app-item">
+          <div class="mobile-slider-items">
+            <p class="mobile-app-title">football app</p>
+            <img src="./assets/images/mobile-image.png" alt="" />
+          </div>
         </div>
       </div>
     </section>
@@ -289,78 +278,66 @@
 
     <section class="section othersSiad-section dark-bg" data-before="OTHERS SAID">
       <div class="container">
-        <div id="othersSiad-splide" class="splide othersSiad-carousel">
-          <div class="splide__track">
-            <ul class="splide__list">
-              <li class="splide__slide">
-                <div class="comment-box">
-                  <div class="user-icon-box">
-                    <img class="user-icon" src="" alt="user" />
-                  </div>
-                  <div class="comment">
-                    <p class="user-name">Maximillian rodrigez</p>
-                    <p class="user-job see-more">facebook cmo</p>
-                    <p class="comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta fugit inventore modi distinctio deserunt blanditiis
-                      facilis nihil eligendi labore voluptas sunt excepturi,
-                      porro sit cum reprehenderit, assumenda eum, error ea.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="comment-box">
-                  <div class="user-icon-box">
-                    <img class="user-icon" src="" alt="user" />
-                  </div>
-                  <div class="comment">
-                    <p class="user-name">Thomas sharp</p>
-                    <p class="user-job see-more">facebook cmo</p>
-                    <p class="comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta fugit inventore modi distinctio deserunt blanditiis
-                      facilis nihil eligendi labore voluptas sunt excepturi,
-                      porro sit cum reprehenderit, assumenda eum, error ea.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="comment-box">
-                  <div class="user-icon-box">
-                    <img class="user-icon" src="" alt="user" />
-                  </div>
-                  <div class="comment">
-                    <p class="user-name">Chris barton</p>
-                    <p class="user-job see-more">facebook cmo</p>
-                    <p class="comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta fugit inventore modi distinctio deserunt blanditiis
-                      facilis nihil eligendi labore voluptas sunt excepturi,
-                      porro sit cum reprehenderit, assumenda eum, error ea.
-                    </p>
-                  </div>
-                </div>
-              </li>
-              <li class="splide__slide">
-                <div class="comment-box">
-                  <div class="user-icon-box">
-                    <img class="user-icon" src="" alt="user" />
-                  </div>
-                  <div class="comment">
-                    <p class="user-name">john bishop</p>
-                    <p class="user-job see-more">facebook cmo</p>
-                    <p class="comment-text">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                      Soluta fugit inventore modi distinctio deserunt blanditiis
-                      facilis nihil eligendi labore voluptas sunt excepturi,
-                      porro sit cum reprehenderit, assumenda eum, error ea.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </ul>
+        <div class="comments-carousel owl-carousel owl-theme">
+          <div class="comment-box">
+            <div class="user-icon-box">
+              <img class="user-icon" src="" alt="user" />
+            </div>
+            <div class="comment">
+              <p class="user-name">Maximillian rodrigez</p>
+              <p class="user-job see-more">facebook cmo</p>
+              <p class="comment-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Soluta fugit inventore modi distinctio deserunt blanditiis
+                facilis nihil eligendi labore voluptas sunt excepturi,
+                porro sit cum reprehenderit, assumenda eum, error ea.
+              </p>
+            </div>
+          </div>
+          <div class="comment-box">
+            <div class="user-icon-box">
+              <img class="user-icon" src="" alt="user" />
+            </div>
+            <div class="comment">
+              <p class="user-name">Thomas sharp</p>
+              <p class="user-job see-more">facebook cmo</p>
+              <p class="comment-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Soluta fugit inventore modi distinctio deserunt blanditiis
+                facilis nihil eligendi labore voluptas sunt excepturi,
+                porro sit cum reprehenderit, assumenda eum, error ea.
+              </p>
+            </div>
+          </div>
+          <div class="comment-box">
+            <div class="user-icon-box">
+              <img class="user-icon" src="" alt="user" />
+            </div>
+            <div class="comment">
+              <p class="user-name">Chris barton</p>
+              <p class="user-job see-more">facebook cmo</p>
+              <p class="comment-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Soluta fugit inventore modi distinctio deserunt blanditiis
+                facilis nihil eligendi labore voluptas sunt excepturi,
+                porro sit cum reprehenderit, assumenda eum, error ea.
+              </p>
+            </div>
+          </div>
+          <div class="comment-box">
+            <div class="user-icon-box">
+              <img class="user-icon" src="" alt="user" />
+            </div>
+            <div class="comment">
+              <p class="user-name">john bishop</p>
+              <p class="user-job see-more">facebook cmo</p>
+              <p class="comment-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Soluta fugit inventore modi distinctio deserunt blanditiis
+                facilis nihil eligendi labore voluptas sunt excepturi,
+                porro sit cum reprehenderit, assumenda eum, error ea.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -495,7 +472,8 @@
 
   <script src="./assets/js/jquery-3.5.1.min.js"></script>
   <script src="./assets/js/slick.min.js"></script>
-  <script src="./assets/js/splide.min.js"></script>
+  <script src="./assets/js/owl.carousel.min.js"></script>
+  <script src="./assets/js/jquery.mousewheel.min.js"></script>
   <script src="./assets/js/jarallax.min.js"></script>
   <script src="./assets/js/jarallax-element.min.js"></script>
   <script src="./assets/js/main.js"></script>
