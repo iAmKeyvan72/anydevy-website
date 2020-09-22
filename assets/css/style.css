@@ -1777,4 +1777,151 @@ body {
   text-align: center;
   margin-top: 70px;
 }
+
+.blog .blog-container {
+  padding: 105px 65px;
+}
+
+.blog .blog-container::before {
+  top: 120px;
+}
+
+.blog .blog-container .blog-header {
+  position: relative;
+  z-index: 2;
+}
+
+.blog .blog-container .blog-header .blogHeader-title {
+  font-size: 48px;
+  margin-bottom: 10px;
+}
+
+.blog .blog-container .blog-header .blogHeader-desc {
+  color: #6b778f;
+  font-size: 22px;
+}
+
+.blog .blog-container .learning-container .leasons-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin-top: 50px;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box {
+  width: 48%;
+  margin-top: 30px;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-img {
+  border-radius: 20px;
+  width: 100%;
+  max-height: 250px;
+  margin-bottom: 10px;
+  -webkit-box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.15);
+          box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-contents {
+  padding: 0 15px;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-contents .leason-title {
+  margin-bottom: 15px;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-contents div {
+  color: rgba(37, 42, 52, 0.75);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 20px;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-tag {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-time {
+  font-size: 14px;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-contents .leason-desc {
+  color: #6b778f;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  /* number of lines to show */
+  -webkit-box-orient: vertical;
+}
+
+.blog .blog-container .learning-container .leasons-container .leason-box .leason-contents .leason-readMore {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+.blog .blog-container .learning-container .pageination-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 100px;
+}
+
+.blog .blog-container .learning-container .pageination-container .page-link {
+  margin: 0 5px;
+  display: inline-block;
+  text-decoration: none;
+  color: #000;
+}
+
+.blog .blog-container .learning-container .pageination-container .page-link.active {
+  border-bottom: 2px solid #ff2e63;
+}
+
+@media (max-width: 960px) {
+  .blog .blog-container .learning-container .leasons-container .leason-box .leason-contents .leason-title {
+    font-size: 20px;
+  }
+  .blog .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-tag {
+    font-size: 14px;
+  }
+  .blog .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-time {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 860px) {
+  .blog .blog-container .learning-container .leasons-container .leason-box .leason-contents .leason-title {
+    font-size: 18px;
+  }
+  .blog .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-tag {
+    font-size: 13px;
+  }
+  .blog .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-time {
+    font-size: 12px;
+  }
+}
 /*# sourceMappingURL=style.css.map */

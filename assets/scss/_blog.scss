@@ -1,0 +1,117 @@
+.blog {    
+  .blog-container {
+    padding: 105px 65px;
+    &::before {
+      top: 120px;
+    }
+    .blog-header {
+      position: relative;
+      z-index: 2;
+      .blogHeader-title {
+        font-size: 48px;
+        margin-bottom: 10px;
+      }
+      .blogHeader-desc {
+        color: #6b778f;
+        font-size: 22px;
+      }
+    }
+    .learning-container {
+      .leasons-container {
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        margin-top: 50px;
+
+        .leason-box {
+          width: 48%;
+          margin-top: 30px;
+
+          .leason-img {
+            border-radius: 20px;
+            width: 100%;
+            max-height: 250px;
+            margin-bottom: 10px;
+            box-shadow: -20px 20px 40px rgba(0, 0, 0, 0.15);
+          }
+
+          .leason-contents {
+            padding: 0 15px;
+            .leason-title {
+              margin-bottom: 15px;
+            }
+
+            div {
+              color: rgba(#252a34, 0.75);
+              @include flex(space-between, center);
+              margin-bottom: 20px;
+              .leason-tag {
+                font-size: 16px;
+                font-weight: 600;
+              }
+
+              .leason-time {
+                font-size: 14px;
+              }
+            }
+
+            .leason-desc {
+              color: #6b778f;
+              font-size: 14px;
+              overflow: hidden;
+              text-overflow: ellipsis;
+              display: -webkit-box;
+              -webkit-line-clamp: 3; /* number of lines to show */
+              -webkit-box-orient: vertical;
+            }
+            .leason-readMore {
+              margin-top: 20px;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+
+      .pageination-container {
+        @include flex(center, center);
+        margin-top: 100px;
+        .page-link {
+          margin: 0 5px;
+          display: inline-block;
+          text-decoration: none;
+          color: #000;
+
+          &.active {
+            border-bottom: 2px solid #ff2e63;
+          }
+        }
+      }
+    }
+  }
+
+  @media(max-width: 960px){
+    .blog-container .learning-container .leasons-container .leason-box .leason-contents .leason-title{ 
+        font-size: 20px;
+    }
+
+    .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-tag {
+        font-size: 14px;
+    }
+
+    .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-time {
+        font-size: 12px;
+    }
+  }
+
+  @media(max-width: 860px){
+    .blog-container .learning-container .leasons-container .leason-box .leason-contents .leason-title{ 
+        font-size: 18px;
+    }
+    .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-tag {
+        font-size: 13px;
+    }
+
+    .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-time {
+        font-size: 12px;
+    }
+  }
+}
