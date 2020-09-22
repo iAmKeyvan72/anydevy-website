@@ -110,6 +110,7 @@
 
     .solution {
       width: 20%;
+      min-width: 100px;
       text-align: center;
       margin: 50px 0;
       position: relative;
@@ -263,10 +264,15 @@
 
       .owl-stage {
         @include flex(unset, flex-end);
+
+        .owl-item {
+          top: 40px;
+        }
       }
 
       .mobile-app-item {
         display: flex;
+        justify-content: center;
       }
 
       .mobile-slider-items {
@@ -344,10 +350,6 @@
     .comments-carousel .owl-stage {
       display: flex;
       align-items: center;
-    }
-
-    .commentsTransform {
-      animation: comments 0.3s ease-in forwards;
     }
 
     .comment-box {
@@ -453,7 +455,7 @@
         flex-direction: row-reverse;
         width: 100%;
 
-        div {
+        .learning-item {
           width: 45%;
           opacity: 0;
 
@@ -517,5 +519,349 @@
         margin-top: 30px;
       }
     }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .home {
+    .first-section {
+      display: block;
+      justify-content: unset;
+      align-items: unset;
+      padding-top: 50px;
+
+      .welcome {
+        flex-direction: column;
+      }
+  
+      .welcome-text-container {
+
+        .welcome-hi {
+          font-size: 18px;
+        }
+
+        .welcome-desc {
+          font-size: 26px;
+          line-height: 1.1;
+        }
+  
+        .slider-text {
+          position: relative;
+  
+          #welcome-slider-text {
+            padding-right: 20px;
+          }
+  
+          .slider-timer {
+            position: absolute;
+            bottom: -5px;
+          }
+        }
+      }
+  
+      .welcome-slider-mobile {
+        margin-top: 40px;
+
+        .welcome-mobile-carousel  {
+  
+          .welcome-item {
+            transform: scale(0.8);
+            img {
+              width: 100%;
+              height: 100%;
+              border-radius: 20px;
+            }
+          }
+
+        }
+    
+      }
+      .welcome-btn {
+        max-width: 150px;
+        margin-top: 20px;
+        font-size: 16px;
+      }
+    }
+
+    .second-section {
+      padding: 130px 0 50px;
+
+      .container{
+        padding: 0 5px;
+      }
+
+      .solution {
+        width: 33%;
+        margin: 30px 0;
+  
+        &-icon-box {
+          max-width: 40px;
+          margin: 0 auto;
+  
+          img {
+            width: 100%;
+          }
+        }
+  
+        &-title {
+          margin-top: 15px;
+          text-transform: capitalize;
+          font-size: 13px;
+        }
+      }
+
+    }
+
+    .third-section {
+      padding: 130px 0 100px;
+      position: relative;
+  
+      .container {
+        display: block;
+      }
+  
+      .big-circle {
+        width: 70px;
+        height: 70px;
+        left: 90%;
+        right: -30px;
+        animation: topToBottomMobile 20s linear infinite;
+      }
+  
+      .small-circle {
+        left: 20px;
+        animation: bottomToTopMobile 8s linear 1s infinite;
+  
+        &::before {
+          content: "";
+          width: 20px;
+          height: 20px;
+        }
+      }
+  
+      .website-mobile-carousel {
+        margin-top: 30px;
+        position: relative;
+        z-index: 9;
+        width: 98%;
+        margin-left: 2%;
+  
+        .website-img {
+          transform: scale(0.8);
+          width: 100%;
+  
+          img {
+            border-radius: 15px;
+          }
+        }
+      }
+  
+      .website-details {
+        margin-top: 10px;
+        text-align: left;
+        z-index: 9;
+        padding: 0 25px;
+  
+        .see-more {
+          width: 100px;
+          min-width: unset;
+          margin: 40px auto 0;
+          text-align: center;
+          display: block;
+        }
+      }
+    }
+
+    .fourth-section {
+      padding: 180px 0 0;
+
+      .mobile-app-box {
+        position: relative;
+        //width: 40%;
+        margin: 10px 20px;
+        display: inline-block;
+
+        // &:nth-child(2n+1) {
+        //   left: -40%;
+        // }
+        // &:nth-child(2n) {
+        //   left: 50%;
+        // }
+
+        img {
+          max-width: 350px;
+        }
+      }
+    }
+
+    .branding-section {
+      padding: 150px 0 80px;
+      .branding-container {
+        display: block;
+        padding: 0;
+  
+        .brand {
+          width: 90%;
+          margin: 0 auto;
+          border-radius: 25px;
+          overflow: hidden;
+          position: relative;
+          box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .bottom-brand {
+          top: -50px;
+        }
+  
+        .brand-text {
+          position: absolute;
+          top: 20px;
+          left: 20px;
+          z-index: 9;
+          margin : 0;
+  
+          .brand-title {
+            font-weight: 900;
+            font-size: 18px;
+          }
+  
+          .brand-year {
+            margin-top: 5px;
+            color: #aaa;
+          }
+        }
+  
+        .brand-image {
+          width: 100%;
+  
+          img {
+            border-radius: 25px;
+          }
+        }
+      }
+  
+      .branding-works {
+        text-align: center;
+        padding: 0 45px;
+        position: relative;
+        top: 0px;
+        margin-top: 30px;
+      }
+    }
+
+    .othersSiad-section {
+      padding: 160px 0;
+  
+      .comments-carousel {
+        width: 98%;
+        margin-left: 2%;
+        .owl-stage {
+          display: flex;
+          align-items: center;
+        }
+      }
+  
+      .comment-box {
+        display: block;
+  
+        .user-icon-box {
+          width: 40px;
+          height: 40px;
+        }
+  
+        .comment {
+          width: auto;
+          color: #000;
+          @include flex (flex-start, center);
+          margin-bottom: 15px;
+  
+          .user-name {
+            font-size: 16px;
+          }
+
+          .user-job {
+            margin: 5px 0;
+          }
+          
+        }
+
+        .comment-text {
+          font-size: 14px;
+          font-style: italic;
+          color: #000;
+        }
+      }
+    }
+
+    .ourTeam-section {
+      padding: 150px 0 100px;
+  
+      .team-container {
+        .teamMate-container,
+        .joinTeam-container {
+          width: 45%;
+          max-width: 200px;
+          padding: 30px 0;
+          margin: 5px 0px;
+  
+          img {
+            max-width: 70px;
+            height: auto;
+          }
+  
+          .teamMate-name {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+
+    .learning-section {
+      padding: 150px 0;
+  
+      .learning-container {
+        .learning-blog {
+          text-align: center;
+          margin-top: 20px;
+        }
+
+        .learning-contents {
+          display: block;
+  
+          .learning-item {
+            width: 90%;
+            margin: 0 auto;
+            opacity: 0;
+            position: relative;
+  
+            &:nth-child(2) {
+              margin-top: 10px;
+            }
+
+            img {
+              border-radius: 20px;
+            }
+
+            .learning-info {
+              position: absolute;
+              bottom: 20px;
+              left: 15px;
+            }
+  
+            .learning-title {
+              font-size: 18px;
+              color: #fff;
+            }
+
+            .learning-desc{
+              color: #e8e8e8;
+              font-size: 14px;
+            }
+          }
+        }
+      }
+    }
+
+  
   }
 }
