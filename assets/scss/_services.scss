@@ -1,8 +1,5 @@
 .services {
-  .container {
-    max-width: 1024px;
-    margin: auto;
-  }
+
   .start-section {
     padding: 150px 0 300px;
     text-align: center;
@@ -91,6 +88,7 @@
           .service-title {
             margin: 30px auto 15px;
             font-size: 18px;
+            font-style: normal;
           }
 
           .service-description {
@@ -155,14 +153,17 @@
         .solutions-header{
           text-align: center;
 
-          h2{
+          .solutions-header-title {
             font-size: 65px;
             margin-bottom: 30px;
             font-style: normal;
           }
 
-          p{
-            padding: 0 120px;
+          .solutions-header-text {
+            padding: 0;
+            width: 95%;
+            max-width: 800px;
+            margin: 0 auto;
             line-height: 1.3;
           }
         }
@@ -171,6 +172,117 @@
           @include flex(space-around, center);
           margin-top: 60px;
           flex-wrap: wrap;
+        }
+      }
+    }
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+  .services {
+    .start-section {
+      padding: 100px 0 150px;
+      text-align: center;
+
+      &::before {
+        top: unset;
+        bottom: 50px;
+      }
+  
+      .start-contents {
+        h1 {
+          font-size: 30px;
+        }
+  
+        p {
+          font-size: 18px;
+        }
+      }
+    }
+  
+    .servicesCard-section {
+      padding: 50px 2% 60px;
+      .container {
+  
+        .serviceCard-container {
+          flex-direction: column;
+          margin-top: -130px;
+  
+          .serviceCard {
+            width: 95%;
+            margin: 20px 5px 0;
+            flex-direction: row;
+            align-items: flex-start;
+            text-align: left;
+            padding: 30px 10px;
+  
+            &:nth-child(3n-1) {
+              margin-top: 20px;
+            }
+
+            img {
+              max-width: 80px;
+              margin-right: 15px;
+            }
+  
+            .service-title {
+              margin: 0px auto 15px;
+              font-size: 16px;
+            }
+  
+            .service-description {
+              color: $desc;
+              font-size: 12px;
+            }
+          }
+        }
+
+        .services-btn-text {
+          font-size: 14px;
+          font-weight: 600;
+          width: 85%;
+          margin: 70px auto 0;
+          max-width: 420px;
+          text-align: center;
+
+        }
+        .services-btn {
+          margin-top: 20px;
+        }
+      }
+    }
+  
+    .dream-section {
+      padding: 50px 2%;
+  
+      .container{
+  
+        .bigDream-box{
+          padding: 50px 25px;
+          width: 95%;
+          margin: 0 auto 100px;
+  
+          img{
+            margin-bottom: 20px;
+            max-width: 50px;
+          }
+        }
+  
+        .solutions-container{
+          .solutions-header{
+            text-align: center;
+  
+            .solutions-header-title {
+              font-size: 34px;
+              font-weight: 900;
+            }
+          }
+  
+          .solutions{
+            margin-top: 20px;
+            flex-direction: column;
+          }
         }
       }
     }

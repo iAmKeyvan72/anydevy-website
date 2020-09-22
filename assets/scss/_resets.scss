@@ -250,16 +250,22 @@ body {
   @include flex(center, center);
   margin: auto;
   .big-box {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    max-height: 350px;
   }
 
   .rectangle-box {
-    width: 350px;
-    height: 175px;
+    max-width: 350px;
+    max-height: 175px;
+    width: 100%;
+    height: auto;
   }
 
   .squareBox {
+    width: 50%;
+    height: auto;
     width: 175px;
     height: 175px;
   }
@@ -348,12 +354,12 @@ body {
   .technology-section {
     .technologies-container {
       padding: 30px 5px;
-  
+
       .technologies-promo {
         font-size: 16px;
         padding: 0 15px;
       }
-  
+
       .technologies {
         img {
           width: 12.2%;
@@ -365,4 +371,31 @@ body {
     }
   }
 
+  .business-card {
+    width: 80%;
+    margin-top: 40px;
+    padding: 0;
+  
+    img {
+      width: 60px;
+      margin-right: 10px;
+    }
+  
+    .business-card-text {
+      text-align: left;
+      .business-card-title {
+        font-size: 20px;
+        font-weight: 600;
+      }
+  
+      .business-card-desc {
+        font-size: 14px;
+        font-style: italic;
+      }
+    }
+  }
+
+  .box {
+    flex-direction: column;
+  }
 }

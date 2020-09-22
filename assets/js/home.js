@@ -108,6 +108,7 @@ $(window).on("resize scroll", function () {
 
 $(".menu-toggle").on("click", () => {
   $(".navbar-list").toggleClass("open");
+  $(".menu-toggle").toggleClass("open");
 });
 
 //carousel configs
@@ -115,12 +116,7 @@ $(".menu-toggle").on("click", () => {
 // welcome carousel
 let welcomeSlides = $('.welcome-carousel').children(".welcome-item").length;
 $('.welcome-carousel').on('initialized.owl.carousel', function (event) {
-  $("#welcome-slider-timer").css("width", "0").animate(
-    {
-      width: `100%`,
-    },
-    3000
-  );
+  welcomeCallback(event)
 });
 
 $('.welcome-carousel').owlCarousel({
@@ -135,6 +131,10 @@ $('.welcome-carousel').owlCarousel({
 });
 
 $('.welcome-carousel').on('changed.owl.carousel', function (event) {
+  welcomeCallback(event)
+});
+
+function welcomeCallback(event) {
   let item = event.item.index;
   let text = $(`.welcome-carousel .owl-item`).eq(item).children(".welcome-item").attr("data-value");
   $("#welcome-slider-text").text("");
@@ -153,9 +153,7 @@ $('.welcome-carousel').on('changed.owl.carousel', function (event) {
     "data-before",
     text.toUpperCase()
   );
-
-});
-
+}
 
 $('.first-section').on('mousewheel', '.welcome-carousel .owl-stage', function (e) {
   if (welcomeSlides > 0) {

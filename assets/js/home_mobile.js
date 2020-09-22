@@ -75,6 +75,22 @@ $(window).on("resize scroll", function () {
     footerflag = true;
   }
 
+  if ($(".fourth-section").isInViewport()) {
+    let i = 0;
+    const interval = setInterval(() => {
+      $(".mobile-app-box .left-col .mobile-app")
+        .eq(i)
+        .addClass("slide-in-right");
+      $(".mobile-app-box .right-col .mobile-app")
+        .eq(i)
+        .addClass("slide-in-left");
+      i++;
+      if (i == 10) {
+        clearInterval(interval);
+      }
+    }, 250);
+  }
+
   if ($(".ourTeam-section").isInViewport()) {
     let i = 0;
 
@@ -108,21 +124,14 @@ $(window).on("resize scroll", function () {
 
 $(".menu-toggle").on("click", () => {
   $(".navbar-list").toggleClass("open");
+  $(".menu-toggle").toggleClass("open");
 });
 
 //carousel configs
 
 // welcome carousel
 $('.welcome-mobile-carousel').on('initialized.owl.carousel', function (event) {
-  let current = event.item.index;
-  $(`.welcome-mobile-carousel .welcome-item`).eq(current - 1).removeClass("scaleTransform")
-  $(`.welcome-mobile-carousel .welcome-item`).eq(current).addClass("scaleTransform")
-  $("#welcome-slider-timer").css("width", "0").animate(
-    {
-      width: `100%`,
-    },
-    3000
-  );
+  welcomeMobileCallback(event)
 });
 
 $('.welcome-mobile-carousel').owlCarousel({
