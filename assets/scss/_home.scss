@@ -22,6 +22,7 @@
     }
 
     .welcome-text-container {
+      padding-top: 40px;
       .welcome-text {
         color: #fff;
         font-weight: 300;
@@ -56,37 +57,39 @@
     }
 
     .welcome-slider {
-      .V_slider {
-        width: 40%;
-        max-width: 400px;
-        min-width: 280px;
-        height: auto;
+      width: 30%;
+      .welcome-carousel-box {
+  
+        transform: rotate(-90deg);
       }
-
-      .V_slider_items {
-        overflow: hidden;
+      .welcome-carousel  {
+        width: 100%;
+        height: 100%;
+      }
+      .welcome-carousel .welcome-item img {
+        width: 100%;
+        height: 100%;
+        transform: rotate(90deg);
         border-radius: 20px;
-        img {
-          width: 100%;
-        }
       }
-
-      .slick-dots {
-        bottom: 0;
-        right: -40px;
-        top: 0;
-        transform: rotateZ(90deg);
-        z-index: 9999;
-
-        li {
-          font-weight: 900;
-          color: darken($color: $light-blue, $amount: 25%);
-          margin-right: 8px;
-        }
-
-        .slick-active {
-          color: $light-blue;
-        }
+  
+      .welcome-carousel .owl-dots {
+        text-align: center;
+        margin-top: 10px;
+        transform: rotate(180deg);
+      }
+      .welcome-carousel .owl-dots .owl-dot{
+        height: 2px;
+        width: 15px;
+        margin: 10px;
+        background-color: darken($color: $light-blue, $amount: 25%);
+        position: relative;
+        z-index: 999999;
+      }
+  
+      .welcome-carousel .owl-dots .owl-dot.active{
+        outline: none;
+        background-color: $light-blue;
       }
     }
 
@@ -97,9 +100,13 @@
   }
 
   .second-section {
-    @include flex(space-evenly, center);
-    padding: 150px 5% 100px;
-    flex-wrap: wrap;
+    padding: 150px 0 100px;
+
+    .container {
+      padding: 0 5%;
+      @include flex(space-evenly, center);
+      flex-wrap: wrap;
+    }
 
     .solution {
       width: 20%;
@@ -189,7 +196,7 @@
     }
 
     .website-carousel {
-      margin-top: 30px;  
+      margin-top: 30px;
       position: relative;
       z-index: 9;
 
@@ -200,7 +207,7 @@
         border-radius: 15px;
         overflow: hidden;
 
-        img{
+        img {
           width: 100%;
           height: 100%;
         }
@@ -215,15 +222,15 @@
       margin-left: 15px;
       overflow: hidden;
       z-index: 9;
-      box-shadow: -20px 20px 40px rgba($dark-gray,0.3);
+      box-shadow: -20px 20px 40px rgba($dark-gray, 0.3);
 
-      img{
+      img {
         width: 100%;
         height: 100%;
       }
     }
 
-    .website-details{
+    .website-details {
       position: relative;
       margin-top: 70px;
       text-align: right;
@@ -244,18 +251,17 @@
       .see-more {
         margin-top: 40px;
       }
-
     }
   }
 
   .fourth-section {
     padding: 230px 0 0;
 
-    .mobile-carousel{
+    .mobile-carousel {
       position: relative;
       width: 100%;
 
-      .owl-stage{
+      .owl-stage {
         @include flex(unset, flex-end);
       }
 
@@ -266,7 +272,7 @@
       .mobile-slider-items {
         text-align: center;
 
-        img{
+        img {
           width: 95%;
           height: auto;
         }
@@ -279,7 +285,6 @@
         }
       }
     }
-
   }
 
   .branding-section {
@@ -329,39 +334,6 @@
     }
   }
 
-  .technology-section {
-    height: 800px;
-    padding: 280px 0;
-    .technologies-container {
-      width: 750px;
-      margin: auto;
-      background-color: $dark-gray;
-      padding: 50px 30px;
-      border-radius: 30px;
-      text-align: center;
-      color: #fff;
-
-      .technologies-promo {
-        margin-bottom: 20px;
-        font-size: 18px;
-      }
-
-      .technologies {
-        @include flex(center, center);
-        flex-direction: column;
-
-        div {
-          margin-top: 30px;
-          img {
-            max-width: 50px;
-            margin: 0 15px;
-            fill: $light-blue;
-          }
-        }
-      }
-    }
-  }
-
   .othersSiad-section {
     padding: 160px 0;
 
@@ -377,14 +349,14 @@
     .commentsTransform {
       animation: comments 0.3s ease-in forwards;
     }
-    
+
     .comment-box {
       transform: scale(0.8);
       background-color: $light-gray;
       border-radius: 15px;
       padding: 20px;
       @include flex(flex-start, flex-start);
-    
+
       .user-icon-box {
         width: 50px;
         height: 50px;
@@ -471,7 +443,7 @@
       position: relative;
       z-index: 2;
 
-      .learning-blog{
+      .learning-blog {
         text-align: right;
         margin-top: -20px;
       }
@@ -508,12 +480,21 @@
   }
 }
 
-
-
 @media only screen and (max-width: 990px) {
-  .home .third-section {
 
-    .website-carousel{
+  .home .first-section .welcome-text-container {
+    .welcome-hi {
+      font-size: 18px;
+    }
+
+    .welcome-desc {
+      font-size: 30px;
+    }
+
+  }
+
+  .home .third-section {
+    .website-carousel {
       margin-top: 0;
     }
 
@@ -521,7 +502,7 @@
       height: 350px;
     }
 
-    .website-details{
+    .website-details {
       margin-top: 50px;
 
       .website-title {
@@ -535,7 +516,6 @@
       .see-more {
         margin-top: 30px;
       }
-
     }
   }
 }

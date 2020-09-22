@@ -171,30 +171,6 @@
           @include flex(space-around, center);
           margin-top: 60px;
           flex-wrap: wrap;
-
-          .solution{
-            @include flex(center, center);
-            width: 40%;
-            margin-top: 40px;
-            padding: 0 5%;
-
-            img{
-              width: 60px;
-              margin-right: 10px;
-            }
-
-            .solution-text{
-              .solution-title{
-                font-size: 20px;
-                font-weight: 600;
-              }
-
-              .solution-desc{
-                font-size: 14px;
-                font-style: italic;
-              }
-            }
-          }
         }
       }
     }

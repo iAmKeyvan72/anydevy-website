@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/Programing Languages/Angular</title>
+    <defs>
+        <path d="M24.6869674,0.0124580632 L48.5609706,8.14834939 L44.695369,38.9064831 L24.6869674,49.9875419 L4.99159842,39.0537599 L1.43902936,8.29562624 L24.6869674,0.0124580632 Z M24.7237404,5.8475412 L10.2375741,38.0782587 L15.6491208,37.9862337 L18.5575153,30.7153398 L31.5528037,30.7153398 L34.737273,38.0782587 L39.9095179,38.1702836 L24.7237404,5.8475412 Z M24.7606982,16.1739217 L29.6568683,26.4080924 L20.453266,26.4080924 L24.7606982,16.1739217 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons/Programing-Languages/Angular" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#E23237" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <rect id="Icon-Color" fill="#08D9D6" mask="url(#mask-2)" x="0" y="0" width="50" height="50"></rect>
+    </g>
+</svg>
