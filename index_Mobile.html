@@ -40,20 +40,19 @@
       <div class="welcome container">
         <div class="welcome-text-container">
           <p class="welcome-text welcome-hi">Hi!</p>
-          <p class="welcome-text welcome-desc">
+          <div class="welcome-text welcome-desc">
             We're here to help
-            <br />
             your idea for its
-          </p>
-          <div class="welcome-text welcome-desc slider-text">
-            <p id="welcome-slider-text">development</p>
-            <div class="slider-timer" id="welcome-slider-timer"></div>
+            <div class="welcome-text welcome-desc slider-text">
+              <p id="welcome-slider-text">development</p>
+              <div class="slider-timer" id="welcome-slider-timer"></div>
+            </div>
           </div>
           <a href="#" class="btn welcome-btn btn-pink"> Lets Start </a>
         </div>
-        <div class="welcome-slider">
-          <div class="welcome-carousel-box">
-            <div id="" class="welcome-carousel owl-carousel theme-default">
+        <div class="welcome-slider-mobile">
+          <div class="welcome-mobile-carousel-box">
+            <div id="" class="welcome-mobile-carousel owl-carousel theme-default">
               <div class="welcome-item" data-value="development">
                 <img src="./assets/images/top-slider/slide1.jpg" alt="" />
               </div>
@@ -135,44 +134,36 @@
     </section>
 
     <section class="section third-section white-bg" data-before="WEBSITES">
-      <div class="container">
-        <div class="third-section-left">
-          <span class="small-circle"></span>
-          <div class="website-carousel owl-carousel owl-theme">
-            <div class="website-img" data-webName="ad agency website" data-year="2016">
-              <img src="http://placehold.it/350x300?text=1">
-            </div>
-            <div class="website-img" data-webName="music website" data-year="2015">
-              <img src="http://placehold.it/350x300?text=2">
-            </div>
-            <div class="website-img" data-webName="shop website" data-year="2017">
-              <img src="http://placehold.it/350x300?text=3">
-            </div>
-            <div class="website-img" data-webName="medical website" data-year="2018">
-              <img src="http://placehold.it/350x300?text=4">
-            </div>
-            <div class="website-img" data-webName="sport website" data-year="2020">
-              <img src="http://placehold.it/350x300?text=5">
-            </div>
-            <div class="website-img" data-webName="bet website" data-year="2019">
-              <img src="http://placehold.it/350x300?text=6">
-            </div>
+      <div>
+        <span class="small-circle"></span>
+        <span class="big-circle"></span>
+        <div class="website-mobile-carousel owl-carousel owl-theme">
+          <div class="website-img" data-webName="ad agency website" data-year="2016">
+            <img src="http://placehold.it/350x300?text=1" />
           </div>
-
-          <div class="website-details">
-            <p class="website-title" id="web-title">Ad Agancy Website</p>
-            <p class="website-year" id="web-year">2016</p>
-
-            <div>
-              <a href="#" class="see-more">See all works</a>
-            </div>
+          <div class="website-img" data-webName="music website" data-year="2015">
+            <img src="http://placehold.it/350x300?text=2" />
+          </div>
+          <div class="website-img" data-webName="shop website" data-year="2017">
+            <img src="http://placehold.it/350x300?text=3" />
+          </div>
+          <div class="website-img" data-webName="medical website" data-year="2018">
+            <img src="http://placehold.it/350x300?text=4" />
+          </div>
+          <div class="website-img" data-webName="sport website" data-year="2020">
+            <img src="http://placehold.it/350x300?text=5" />
+          </div>
+          <div class="website-img" data-webName="bet website" data-year="2019">
+            <img src="http://placehold.it/350x300?text=6" />
           </div>
         </div>
 
-        <div class="third-section-right">
-          <span class="big-circle"></span>
-          <div class="larger-image">
-            <img id="larger-img" src="http://placehold.it/350x300?text=6" alt="">
+        <div class="website-details">
+          <p class="website-title" id="web-title">Ad Agancy Website</p>
+          <p class="website-year" id="web-year">2016</p>
+
+          <div>
+            <a href="#" class="see-more">See all works</a>
           </div>
         </div>
 
@@ -182,49 +173,27 @@
     </section>
 
     <section class="section fourth-section dark-bg" data-before="MOBILE APP">
-      <div class="mobile-carousel owl-carousel owl-theme">
-        <div class="mobile-app-item">
-          <div class="mobile-slider-items">
-            <p class="mobile-app-title">medical app</p>
-            <img src="./assets/images/mobile-image-mid.png" alt="" />
-          </div>
-        </div>
-        <div class="mobile-app-item">
-          <div class="mobile-slider-items">
-            <p class="mobile-app-title">task manager app</p>
-            <img src="./assets/images/mobile-image-small.png" alt="" />
-          </div>
-        </div>
-        <div class="mobile-app-item">
-          <div class="mobile-slider-items">
-            <p class="mobile-app-title">bet app</p>
-            <img src="./assets/images/mobile-image.png" alt="" />
-          </div>
-        </div>
-        <div class="mobile-app-item">
-          <div class="mobile-slider-items">
-            <p class="mobile-app-title">football app</p>
-            <img src="./assets/images/mobile-image-small.png" alt="" />
-          </div>
-        </div>
-        <div class="mobile-app-item">
-          <div class="mobile-slider-items">
-            <p class="mobile-app-title">social media app</p>
-            <img src="./assets/images/mobile-image-mid.png" alt="" />
-          </div>
-        </div>
-        <div class="mobile-app-item">
-          <div class="mobile-slider-items">
-            <p class="mobile-app-title">football app</p>
-            <img src="./assets/images/mobile-image.png" alt="" />
-          </div>
-        </div>
+
+      <div class="mobile-app-box">
+        <img class="mobile-app" src="./assets/images/mobile-image-small.png" alt="" />
+      </div>
+      <div class="mobile-app-box">
+        <img class="mobile-app" src="./assets/images/mobile-image.png" alt="" />
+      </div>
+      <div class="mobile-app-box">
+        <img class="mobile-app" src="./assets/images/mobile-image-mid.png" alt="" />
+      </div>
+      <div class="mobile-app-box">
+        <img class="mobile-app" src="./assets/images/mobile-image-small.png" alt="">
+      </div>
+      <div class="mobile-app-box">
+        <img class="mobile-app" src="./assets/images/mobile-image.png" alt="">
       </div>
     </section>
 
-    <section class="section branding-section white-bg" data-before="BRANDING">
+    <section class="section branding-section light-bg" data-before="BRANDING">
       <div class="branding-container">
-        <div class="left-brand" data-jarallax-element="100">
+        <div class="brand top-brand">
           <div class="brand-text">
             <p class="brand-title">Restaurant Menu</p>
             <p class="brand-year">2020</p>
@@ -233,7 +202,7 @@
             <img src="https://picsum.photos/seed/picsum/350/350" alt="brand-image" />
           </div>
         </div>
-        <div class="right-brand" data-jarallax-element="-100">
+        <div class="brand bottom-brand">
           <div class="brand-image">
             <img src="https://picsum.photos/seed/picsum/400/400" alt="brand-image" />
           </div>
@@ -248,7 +217,7 @@
       </div>
     </section>
 
-    <section class="section technology-section light-bg" data-before="TECHNOLOGIES">
+    <section class="section technology-section white-bg" data-before="TECHNOLOGIES">
       <div class="technologies-container">
         <p class="technologies-promo">
           Here are technologies that we are capable to make your ideal product
@@ -279,64 +248,72 @@
       <div class="container">
         <div class="comments-carousel owl-carousel owl-theme">
           <div class="comment-box">
-            <div class="user-icon-box">
-              <img class="user-icon" src="" alt="user" />
-            </div>
             <div class="comment">
-              <p class="user-name">Maximillian rodrigez</p>
-              <p class="user-job see-more">facebook cmo</p>
-              <p class="comment-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Soluta fugit inventore modi distinctio deserunt blanditiis
-                facilis nihil eligendi labore voluptas sunt excepturi,
-                porro sit cum reprehenderit, assumenda eum, error ea.
-              </p>
+              <div class="user-icon-box">
+                <img class="user-icon" src="" alt="user" />
+              </div>
+              <div>
+                <p class="user-name">Maximillian rodrigez</p>
+                <p class="user-job see-more">facebook cmo</p>
+              </div>
             </div>
+            <p class="comment-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Soluta fugit inventore modi distinctio deserunt blanditiis
+              facilis nihil eligendi labore voluptas sunt excepturi,
+              porro sit cum reprehenderit, assumenda eum, error ea.
+            </p>
           </div>
           <div class="comment-box">
-            <div class="user-icon-box">
-              <img class="user-icon" src="" alt="user" />
-            </div>
             <div class="comment">
-              <p class="user-name">Thomas sharp</p>
-              <p class="user-job see-more">facebook cmo</p>
-              <p class="comment-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Soluta fugit inventore modi distinctio deserunt blanditiis
-                facilis nihil eligendi labore voluptas sunt excepturi,
-                porro sit cum reprehenderit, assumenda eum, error ea.
-              </p>
+              <div class="user-icon-box">
+                <img class="user-icon" src="" alt="user" />
+              </div>
+              <div>
+                <p class="user-name">susan barton</p>
+                <p class="user-job see-more">facebook cmo</p>
+              </div>
             </div>
+            <p class="comment-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Soluta fugit inventore modi distinctio deserunt blanditiis
+              facilis nihil eligendi labore voluptas sunt excepturi,
+              porro sit cum reprehenderit, assumenda eum, error ea.
+            </p>
           </div>
           <div class="comment-box">
-            <div class="user-icon-box">
-              <img class="user-icon" src="" alt="user" />
-            </div>
             <div class="comment">
-              <p class="user-name">Chris barton</p>
-              <p class="user-job see-more">facebook cmo</p>
-              <p class="comment-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Soluta fugit inventore modi distinctio deserunt blanditiis
-                facilis nihil eligendi labore voluptas sunt excepturi,
-                porro sit cum reprehenderit, assumenda eum, error ea.
-              </p>
+              <div class="user-icon-box">
+                <img class="user-icon" src="" alt="user" />
+              </div>
+              <div>
+                <p class="user-name">thomas sharp</p>
+                <p class="user-job see-more">facebook cmo</p>
+              </div>
             </div>
+            <p class="comment-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Soluta fugit inventore modi distinctio deserunt blanditiis
+              facilis nihil eligendi labore voluptas sunt excepturi,
+              porro sit cum reprehenderit, assumenda eum, error ea.
+            </p>
           </div>
           <div class="comment-box">
-            <div class="user-icon-box">
-              <img class="user-icon" src="" alt="user" />
-            </div>
             <div class="comment">
-              <p class="user-name">john bishop</p>
-              <p class="user-job see-more">facebook cmo</p>
-              <p class="comment-text">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                Soluta fugit inventore modi distinctio deserunt blanditiis
-                facilis nihil eligendi labore voluptas sunt excepturi,
-                porro sit cum reprehenderit, assumenda eum, error ea.
-              </p>
+              <div class="user-icon-box">
+                <img class="user-icon" src="" alt="user" />
+              </div>
+              <div>
+                <p class="user-name">john rosell</p>
+                <p class="user-job see-more">facebook cmo</p>
+              </div>
             </div>
+            <p class="comment-text">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Soluta fugit inventore modi distinctio deserunt blanditiis
+              facilis nihil eligendi labore voluptas sunt excepturi,
+              porro sit cum reprehenderit, assumenda eum, error ea.
+            </p>
           </div>
         </div>
       </div>
@@ -391,24 +368,28 @@
       <div class="learning-container">
         <div class="learning-contents">
           <div class="learning-item">
-            <img src="https://picsum.photos/seed/picsum/350/350" alt="learning" />
-            <p class="learning-title">
-              How to seprate your word<wbr />from life
-              </p>
-              <p class="learning-desc">
-                In everyones life it happens that you<wbr />can’t choose what
-                time is to work or to…
-              </p>
+            <img src="https://picsum.photos/seed/picsum/350/200" alt="learning" />
+            <div class="learning-info">
+              <p class="learning-title">
+                How to seprate your word<wbr />from life
+                </p>
+                <p class="learning-desc">
+                  In everyones life it happens that you<wbr />can’t choose what
+                  time is to work or to…
+                </p>
+            </div>
           </div>
           <div class="learning-item">
-            <img src="https://picsum.photos/seed/picsum/350/350" alt="learning" />
-            <p class="learning-title">
-              How to seprate your word <wbr /> from life
-              </p>
-              <p class="learning-desc">
-                In everyones life it happens that you <wbr /> can’t choose what
-                time is to work or to…
-              </p>
+            <img src="https://picsum.photos/seed/picsum/350/200" alt="learning" />
+            <div class="learning-info">
+              <p class="learning-title">
+                How to seprate your word<wbr />from life
+                </p>
+                <p class="learning-desc">
+                  In everyones life it happens that you<wbr />can’t choose what
+                  time is to work or to…
+                </p>
+            </div>
           </div>
         </div>
         <div class="learning-blog">
@@ -471,10 +452,7 @@
 
   <script src="./assets/js/jquery-3.5.1.min.js"></script>
   <script src="./assets/js/owl.carousel.min.js"></script>
-  <script src="./assets/js/jquery.mousewheel.min.js"></script>
-  <script src="./assets/js/jarallax.min.js"></script>
-  <script src="./assets/js/jarallax-element.min.js"></script>
-  <script src="./assets/js/home.js"></script>
+  <script src="./assets/js/home_mobile.js"></script>
 </body>
 
 </html>

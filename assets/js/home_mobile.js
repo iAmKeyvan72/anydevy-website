@@ -113,8 +113,10 @@ $(".menu-toggle").on("click", () => {
 //carousel configs
 
 // welcome carousel
-let welcomeSlides = $('.welcome-carousel').children(".welcome-item").length;
-$('.welcome-carousel').on('initialized.owl.carousel', function (event) {
+$('.welcome-mobile-carousel').on('initialized.owl.carousel', function (event) {
+  let current = event.item.index;
+  $(`.welcome-mobile-carousel .welcome-item`).eq(current - 1).removeClass("scaleTransform")
+  $(`.welcome-mobile-carousel .welcome-item`).eq(current).addClass("scaleTransform")
   $("#welcome-slider-timer").css("width", "0").animate(
     {
       width: `100%`,
@@ -123,20 +125,24 @@ $('.welcome-carousel').on('initialized.owl.carousel', function (event) {
   );
 });
 
-$('.welcome-carousel').owlCarousel({
+$('.welcome-mobile-carousel').owlCarousel({
   loop: true,
-  items: 1,
-  center: true,
-  nav: false,
-  dots: true,
+  items: 1.5,
+  margin: 5,
   autoplay: true,
   autoplayTimeout: 3000,
-  autoplayHoverPause: true
+  nav: false,
+  dots: false,
+  onDragged: welcomeMobileCallback
+})
+
+$('.welcome-mobile-carousel').on('changed.owl.carousel', function (event) {
+  welcomeMobileCallback(event)
 });
 
-$('.welcome-carousel').on('changed.owl.carousel', function (event) {
-  let item = event.item.index;
-  let text = $(`.welcome-carousel .owl-item`).eq(item).children(".welcome-item").attr("data-value");
+function welcomeMobileCallback(event) {
+  let current = event.item.index;
+  let text = $(`.welcome-mobile-carousel .owl-item`).eq(current).children(".welcome-item").attr("data-value");
   $("#welcome-slider-text").text("");
   $("#welcome-slider-timer").css("width", "0px");
   $("#welcome-slider-timer").animate(
@@ -153,82 +159,40 @@ $('.welcome-carousel').on('changed.owl.carousel', function (event) {
     "data-before",
     text.toUpperCase()
   );
-
-});
-
-
-$('.first-section').on('mousewheel', '.welcome-carousel .owl-stage', function (e) {
-  if (welcomeSlides > 0) {
-    if (e.deltaY > 0) {
-      $('.welcome-carousel').trigger('next.owl');
-    } else {
-      $('.welcome-carousel').trigger('prev.owl');
-    }
-    e.preventDefault();
-    welcomeSlides--;
-  }
-});
+  $(`.welcome-mobile-carousel .welcome-item`).eq(current + 1).removeClass("scaleTransform")
+  $(`.welcome-mobile-carousel .welcome-item`).eq(current - 1).removeClass("scaleTransform")
+  $(`.welcome-mobile-carousel .welcome-item`).eq(current).addClass("scaleTransform")
+}
 
 // End of welcome carousel
 
 // third section carousel
 
-$('.website-carousel').owlCarousel({
-  rtl: true,
-  items: 3,
+$('.website-mobile-carousel').on('initialized.owl.carousel', function (event) {
+  let current = event.item.index;
+  $(`.website-mobile-carousel .website-img`).eq(current - 1).removeClass("scaleTransform")
+  $(`.website-mobile-carousel .website-img`).eq(current).addClass("scaleTransform")
+});
+
+$('.website-mobile-carousel').owlCarousel({
   loop: true,
-  margin: 10,
+  items: 1.5,
+  margin: 5,
   nav: false,
   dots: false,
-  onDragged: callback
+  onDragged: websiteMobileCallback
 })
-function callback(event) {
-  var item = event.item.index;
-  let src = $(`.website-carousel .owl-item`).eq(item - 1).children(".website-img").children("img").attr("src");
-  $("#larger-img").attr("src", src);
-  $("#web-title").text($(`.website-carousel .owl-item`).eq(item - 1).children(".website-img").attr("data-webName"));
-  $("#web-year").text($(`.website-carousel .owl-item`).eq(item - 1).children(".website-img").attr("data-year"));
+
+function websiteMobileCallback(event) {
+  let current = event.item.index;
+  let text = $(`.website-mobile-carousel .owl-item`).eq(current).children(".website-img").attr("data-value");
+
+  $(`.website-mobile-carousel .website-img`).eq(current + 1).removeClass("scaleTransform")
+  $(`.website-mobile-carousel .website-img`).eq(current - 1).removeClass("scaleTransform")
+  $(`.website-mobile-carousel .website-img`).eq(current).addClass("scaleTransform")
 }
 
 // End third section carousel
-
-// mobile section carousel
-var count = $('.mobile-carousel').children(".mobile-app-item").length;
-$('.mobile-carousel').owlCarousel({
-  loop: true,
-  margin: 10,
-  items: 5,
-  stagePadding: 40,
-  center: true,
-  nav: false,
-  dots: false,
-  responsiveClass: true,
-  responsive: {
-    800: {
-      items: 3
-    },
-    1024: {
-      items: 3
-    },
-    1200: {
-      items: 5
-    }
-  }
-})
-
-$('.mobile-carousel').on('mousewheel', '.owl-stage', function (e) {
-  if (count > 0) {
-    if (e.deltaY > 0) {
-      $('.mobile-carousel').trigger('next.owl');
-    } else {
-      $('.mobile-carousel').trigger('prev.owl');
-    }
-    e.preventDefault();
-    count--;
-  }
-});
-
-// End mobile section carousel
 
 // comments section carousel
 
@@ -240,8 +204,8 @@ $('.comments-carousel').on('initialized.owl.carousel', function (event) {
 
 $('.comments-carousel').owlCarousel({
   loop: true,
-  items: 2,
-  margin: 100,
+  items: 1.2,
+  margin: 0,
   nav: false,
   dots: false,
   onDragged: commentsCallback

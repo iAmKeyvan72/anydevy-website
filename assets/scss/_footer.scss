@@ -183,3 +183,31 @@
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
+
+
+@media only screen and (max-width: 768px) { 
+    .footer {
+        flex-direction: column;
+        padding: 150px 15px 100px;
+    
+        .footer-form-box {
+            width: 100%;
+    
+            .footer-text-box {
+                .footer-title {
+                    font-size: 36px;
+                    height: 48px;
+                }
+    
+                .footer-text {
+                    font-size: 14px;
+                }
+            }
+        }
+    
+        .contact-detail {
+            text-align: center;
+            margin-top: 40px;
+        }
+    }
+}
