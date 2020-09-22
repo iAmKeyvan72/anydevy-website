@@ -1,0 +1,233 @@
+.single-blog {
+  .singleBlog-banner {
+    img {
+      width: 100%;
+      max-height: 600px;
+    }
+  }
+  .singleBlog-container {
+    padding: 20px 5% 100px;
+    .container {
+      .singleBlog-title {
+        margin-bottom: 100px;
+        h1 {
+          font-size: 36px;
+          margin-bottom: 20px;
+        }
+        div {
+          @include flex(space-between, center);
+          color: rgba(#252a34, 0.75);
+          .singleBlog-tag {
+            font-size: 22px;
+          }
+
+          .singleBlog-date {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .singleBlog-contents {
+      }
+
+      .free-quote {
+        text-align: center;
+        margin-top: 100px;
+
+        p {
+          font-size: 20px;
+          font-style: italic;
+        }
+
+        .freeQuote-btn {
+          font-size: 16px;
+          width: 250px;
+          margin: 30px auto 0;
+          transition: 0.4s;
+          &:hover {
+            box-shadow: $pink;
+            box-shadow: 0 0 20px 5px rgba($pink, 0.5);
+          }
+        }
+      }
+
+      .postNav-container {
+        margin: 100px auto;
+        max-width: 800px;
+        @include flex(space-between, center);
+        flex-wrap: wrap;
+        .previous-post,
+        .next-post {
+          width: 50%;
+          max-width: 350px;
+          position: relative;
+
+          img {
+            filter: brightness(0.2);
+            width: 100%;
+            max-width: 350px;
+            max-height: 120px;
+            border-radius: 15px;
+          }
+
+          .post-desc {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            margin: auto;
+            z-index: 2;
+            color: #fff;
+            padding: 0 30px;
+            font-size: 20px;
+
+            .post-nav {
+              color: $pink;
+              font-size: 18px;
+            }
+
+            .post-title {
+              font-weight: 600;
+            }
+          }
+        }
+
+        .previous-post {
+          .post-desc {
+            right: 0 !important;
+            text-align: right;
+          }
+        }
+
+        .next-post {
+          .post-desc {
+            left: 0 !important;
+          }
+        }
+      }
+
+      .postComment-container {
+        padding: 90px 0;
+        text-align: center;
+        &::before {
+          content: attr(data-before);
+          position: absolute;
+          top: 30px;
+          left: 0;
+          right: 0;
+          text-align: center;
+          font-size: 12vw;
+          color: #e3e3e4;
+          font-weight: 900;
+          -webkit-text-stroke: 2px #e3e3e4;
+        }
+
+        .postComment-header {
+          margin-bottom: 50px;
+          position: relative;
+          z-index: 1;
+          .postComment-title {
+            font-size: 23px;
+            color: #252a34;
+            font-weight: 600;
+            margin-bottom: 10px;
+          }
+          .postCommnet-desc {
+            color: rgba(#252a34, 0.8);
+            font-size: 18px;
+          }
+        }
+
+        .postComment-form {
+          max-width: 420px;
+          margin: auto;
+
+          .postComment-input {
+            display: block;
+            width: 100%;
+            max-width: 420px;
+            padding: 20px 10px;
+            color: #333;
+            outline: none;
+            background-color: #f5f5f5;
+            border-radius: 4px;
+            font-size: 14px;
+            border: #f5f5f5;
+            margin: 10px 0;
+
+            &::placeholder {
+              color: #aaa;
+              font-family: PTSans;
+              font-size: 16px;
+            }
+          }
+        }
+        .postComment-btn {
+          font-size: 16px;
+          margin: 30px auto 0;
+          cursor: pointer;
+          transition: 0.4s;
+          &:hover {
+            box-shadow: $pink;
+            box-shadow: 0 0 20px 5px rgba($pink, 0.5);
+          }
+        }
+      }
+
+      .opinion-section {
+        padding: 110px 5%;
+        .opinionComment-container {
+          position: relative;
+          z-index: 2;
+
+          .opinionComment {
+            @include flex(center, center);
+            flex-direction: column;
+
+            .opinion {
+              background-color: #f5f5f5;
+              padding: 20px;
+              border-radius: 15px;
+              margin-top: 20px;
+              max-width: 600px;
+
+              .opinion-header {
+                @include flex(space-between, center);
+                margin-bottom: 10px;
+
+                .opinion-writer {
+                    color: #252A34;
+                  .opinion-writer-name {
+                    font-size: 16px;
+                    font-weight: 600;
+                    color: #333;
+                  }
+                }
+
+                .opinionReply-btn {
+                  max-width: 60px;
+                  width: 100%;
+                  border-radius: 3px;
+                  padding: 2px;
+                  transition: 0.4s;
+                  font-size: 14px;
+                  &:hover {
+                    box-shadow: $light-blue;
+                    box-shadow: 0 0 5px 3px rgba($light-blue, 0.4);
+                  }
+                }
+              }
+            }
+
+            .opinion-answers{
+                border-left: 3px dashed rgba($light-blue, 1);
+
+
+                
+                
+            }
+          }
+        }
+      }
+    }
+  }
+}

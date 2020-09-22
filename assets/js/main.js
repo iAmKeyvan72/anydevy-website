@@ -70,6 +70,7 @@ $(window).on("resize scroll", function () {
 
 $(".menu-toggle").on("click", () => {
   $(".navbar-list").toggleClass("open");
+  $(".menu-toggle").toggleClass("open");
 });
 
 // footer input

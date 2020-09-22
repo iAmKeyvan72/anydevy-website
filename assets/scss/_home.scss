@@ -677,19 +677,39 @@
 
       .mobile-app-box {
         position: relative;
-        //width: 40%;
-        margin: 10px 20px;
-        display: inline-block;
+        width: 100%;
+        margin: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        // &:nth-child(2n+1) {
-        //   left: -40%;
-        // }
-        // &:nth-child(2n) {
-        //   left: 50%;
-        // }
+        .left-col,
+        .right-col {
+          width: 100%;
+          margin: 0 15px;
+        }
 
-        img {
-          max-width: 350px;
+        .left-col {
+          left: -50%;
+          .mobile-app {
+            position: relative;
+            transform: translateX(-1000px);
+          }
+        }
+
+        .right-col {
+          right: -50%;
+          .mobile-app {
+            position: relative;
+            transform: translateX(1000px);
+          }
+        }
+
+        .mobile-app {
+          position: relative;
+          max-width: 250px;
+          position: relative;
+          margin: 15px 0;
         }
       }
     }
@@ -861,7 +881,5 @@
         }
       }
     }
-
-  
   }
 }

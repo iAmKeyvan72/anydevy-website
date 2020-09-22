@@ -1,72 +1,72 @@
 /* footer */
 
 .footer {
-    @include flex(center, center);
-    padding: 150px 5% 100px;
+  @include flex(center, center);
+  padding: 150px 5% 100px;
 
-    .footer-form-box {
-        position: relative;
-        z-index: 99;
-        width: 70%;
+  .footer-form-box {
+    position: relative;
+    z-index: 99;
+    width: 70%;
 
-        .footer-text-box {
-            .footer-title {
-                font-size: 40px;
-                color: #fff;
-                height: 52px;
+    .footer-text-box {
+      .footer-title {
+        font-size: 40px;
+        color: #fff;
+        height: 52px;
 
-                .pink{
-                    color: $pink;
-                }
-            }
-
-            .footer-text {
-                font-size: 16px;
-                color: #fff;
-                margin: 15px 0 20px;
-            }
+        .pink {
+          color: $pink;
         }
-        
-        .contact-form {
-            max-width: 420px;
+      }
 
-            .footer-input{
-                display: block;
-                width: 100%;
-                max-width: 420px;
-                padding: 8px 10px;
-                color: #fff;
-                outline: none;
-                background-color: transparent;
-                border-radius: 4px;
-                border: 1px solid darken($color: $light-blue, $amount: 5%);
-                font-size: 14px;
-                margin: 10px 0;
-            }
-
-            .contact-form-btn {
-                font-size: 16px;
-            }
-        }
+      .footer-text {
+        font-size: 16px;
+        color: #fff;
+        margin: 15px 0 20px;
+      }
     }
 
-    .contact-detail {
-        text-align: right;
+    .contact-form {
+      max-width: 420px;
 
-        .email-box {
-            margin-bottom: 40px;
-        }
+      .footer-input {
+        display: block;
+        width: 100%;
+        max-width: 420px;
+        padding: 8px 10px;
+        color: #fff;
+        outline: none;
+        background-color: transparent;
+        border-radius: 4px;
+        border: 1px solid darken($color: $light-blue, $amount: 5%);
+        font-size: 14px;
+        margin: 10px 0;
+      }
 
-        .footer-label {
-            margin: 10px 0;
-            color: #888a8f;
-            font-weight: 700;
-        }
-
-        .see-more {
-            color: #fff;
-        }
+      .contact-form-btn {
+        font-size: 16px;
+      }
     }
+  }
+
+  .contact-detail {
+    text-align: right;
+
+    .email-box {
+      margin-bottom: 40px;
+    }
+
+    .footer-label {
+      margin: 10px 0;
+      color: #888a8f;
+      font-weight: 700;
+    }
+
+    .see-more {
+      color: #fff;
+    }
+  }
 }
 
 .input_container {
@@ -74,17 +74,17 @@
 }
 
 .input-with-label {
-    width: 100%;
-    outline: none;
-    box-sizing: border-box;
-    letter-spacing: 1px;
+  width: 100%;
+  outline: none;
+  box-sizing: border-box;
+  letter-spacing: 1px;
 }
 
 .effect-21 {
-    border: 1px solid #ccc;
-    padding: 7px 14px;
-    transition: 0.4s;
-    background: transparent;
+  border: 1px solid #ccc;
+  padding: 7px 14px;
+  transition: 0.4s;
+  background: transparent;
 }
 
 .effect-21 ~ .focus-border:before,
@@ -99,7 +99,7 @@
   -webkit-transition: 0.2s;
   transition: 0.2s;
   -webkit-transition-delay: 0.2s;
-          transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .effect-21 ~ .focus-border:after {
@@ -108,41 +108,41 @@
   right: auto;
   left: 0;
   -webkit-transition-delay: 0.6s;
-          transition-delay: 0.6s;
+  transition-delay: 0.6s;
 }
 
 .effect-21 ~ .focus-border i:before,
 .effect-21 ~ .focus-border i:after {
   content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 2px;
-    height: 0;
-    background-color: $light-blue;
-    transition: 0.2s;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 2px;
+  height: 0;
+  background-color: $light-blue;
+  transition: 0.2s;
 }
 
 .effect-21 ~ .focus-border i:after {
-    left: auto;
-    right: 0;
-    top: auto;
-    bottom: 0;
-    transition-delay: 0.4s;
+  left: auto;
+  right: 0;
+  top: auto;
+  bottom: 0;
+  transition-delay: 0.4s;
 }
 
 .effect-21:focus ~ .focus-border:before,
 .effect-21:focus ~ .focus-border:after,
 .has-content.effect-21 ~ .focus-border:before,
 .has-content.effect-21 ~ .focus-border:after {
-    width: 100%;
-    transition: 0.2s;
-    transition-delay: 0.6s;
+  width: 100%;
+  transition: 0.2s;
+  transition-delay: 0.6s;
 }
 
 .effect-21:focus ~ .focus-border:after,
 .has-content.effect-21 ~ .focus-border:after {
-    transition-delay: 0.2s;
+  transition-delay: 0.2s;
 }
 
 .effect-21:focus ~ .focus-border i:before,
@@ -155,21 +155,21 @@
 
 .effect-21:focus ~ .focus-border i:after,
 .has-conten.effect-21 ~ .focus-border i:after {
-    transition-delay: 0.4s;
+  transition-delay: 0.4s;
 }
 
 .effect-21 ~ label {
-    position: absolute;
-    left: 14px;
-    padding: 1px 5px;
-    z-index: -1;
-    text-align: center;
-    top: 50%;
-    font-size: 14px;
-    transform: translateY(-50%);
-    color: #888888;
-    transition: 0.3s;
-    letter-spacing: 0.5px;
+  position: absolute;
+  left: 14px;
+  padding: 1px 5px;
+  z-index: -1;
+  text-align: center;
+  top: 50%;
+  font-size: 14px;
+  transform: translateY(-50%);
+  color: #888888;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
 }
 
 .effect-21:focus ~ label,
@@ -184,30 +184,30 @@
   transition: 0.3s;
 }
 
+@media only screen and (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    padding: 150px 15px 100px;
 
-@media only screen and (max-width: 768px) { 
-    .footer {
-        flex-direction: column;
-        padding: 150px 15px 100px;
-    
-        .footer-form-box {
-            width: 100%;
-    
-            .footer-text-box {
-                .footer-title {
-                    font-size: 36px;
-                    height: 48px;
-                }
-    
-                .footer-text {
-                    font-size: 14px;
-                }
-            }
+    .footer-form-box {
+      width: 100%;
+      max-width: 420px;
+
+      .footer-text-box {
+        .footer-title {
+          font-size: 36px;
+          height: 48px;
         }
-    
-        .contact-detail {
-            text-align: center;
-            margin-top: 40px;
+
+        .footer-text {
+          font-size: 14px;
         }
+      }
     }
+
+    .contact-detail {
+      text-align: center;
+      margin-top: 40px;
+    }
+  }
 }

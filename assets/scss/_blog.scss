@@ -1,6 +1,6 @@
 .blog {    
   .blog-container {
-    padding: 105px 65px;
+    padding: 105px 5%;
     &::before {
       top: 120px;
     }
@@ -40,7 +40,7 @@
               margin-bottom: 15px;
             }
 
-            div {
+            .leason-details {
               color: rgba(#252a34, 0.75);
               @include flex(space-between, center);
               margin-bottom: 20px;
@@ -112,6 +112,82 @@
 
     .blog-container .learning-container .leasons-container .leason-box .leason-contents div .leason-date {
         font-size: 12px;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .blog {    
+    .blog-container {
+      &::before {
+        top: 180px;
+      }
+      .blog-header {
+        .blogHeader-title {
+          font-size: 30px;
+        }
+        .blogHeader-desc {
+          font-size: 18px;
+        }
+      }
+      .learning-container {
+        .leasons-container {
+          flex-direction: column;
+          margin-top: 10px;
+  
+          .leason-box {
+            width: 95%;
+            margin-top: 30px;
+  
+            .leason-contents {
+              padding: 0 15px;
+              .leason-title {
+                margin-bottom: 10px;
+              }
+  
+              .leason-details{
+                flex-direction: column;
+                align-items: flex-start;
+                margin-bottom: 10px;
+  
+                .leason-date {
+                  font-size: 16px;
+                  margin-top: 5px;
+                }
+              }
+  
+              .leason-desc {
+                color: #6b778f;
+                font-size: 14px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: -webkit-box;
+                -webkit-line-clamp: 3; /* number of lines to show */
+                -webkit-box-orient: vertical;
+              }
+              .leason-readMore {
+                margin-top: 20px;
+                font-size: 18px;
+              }
+            }
+          }
+        }
+  
+        .pageination-container {
+          @include flex(center, center);
+          margin-top: 100px;
+          .page-link {
+            margin: 0 5px;
+            display: inline-block;
+            text-decoration: none;
+            color: #000;
+  
+            &.active {
+              border-bottom: 2px solid #ff2e63;
+            }
+          }
+        }
+      }
     }
   }
 }
