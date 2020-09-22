@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="50px" height="50px" viewBox="0 0 50 50" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Icons/Programing Languages/HTML5</title>
+    <defs>
+        <path d="M47.0437782,5.32907052e-14 L43.027319,44.99485 L24.9730404,50 L6.96853333,45.0017627 L2.95622179,5.32907052e-14 L47.0437782,5.32907052e-14 Z M38.806762,9.19892023 L11.1602298,9.19892023 L11.2922626,10.6796234 L12.6488826,25.8893205 L31.7773968,25.8893205 L31.1365883,33.047435 L24.9808172,34.7089056 L24.9758055,34.7106338 L18.829021,33.0508914 L18.4360332,28.6490485 L12.8954936,28.6490485 L13.6686806,37.3151713 L24.9745958,40.4535431 L25,40.4466304 L36.295719,37.3151713 L36.3786715,36.3826463 L37.6758421,21.8521232 L37.8104672,20.3700375 L17.6965457,20.3700375 L17.1920905,14.7182032 L38.3126758,14.7182032 L38.4232793,13.4777169 L38.674902,10.6796234 L38.806762,9.19892023 Z" id="path-1"></path>
+    </defs>
+    <g id="Icons/Programing-Languages/HTML5" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="Combined-Shape" fill="#E44D26" fill-rule="nonzero" xlink:href="#path-1"></use>
+        <rect id="Icon-Color" fill="#08D9D6" mask="url(#mask-2)" x="0" y="0" width="50" height="50"></rect>
+    </g>
+</svg>

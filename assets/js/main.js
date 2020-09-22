@@ -91,7 +91,6 @@ $(window).on("resize scroll", function () {
   }
 
   if (($(".learning-section").offset().top - 700) <= wTop) {
-    console.log("helol");
     let i = 0;
 
     const interval = setInterval(() => {
@@ -111,10 +110,12 @@ $(".menu-toggle").on("click", () => {
   $(".navbar-list").toggleClass("open");
 });
 
-//slick configs
+//carousel configs
 
-$(".V_slider").on("init.slick", function (event, slick) {
-  $("#welcome-slider-timer").animate(
+// welcome carousel
+let welcomeSlides = $('.welcome-carousel').children(".welcome-item").length;
+$('.welcome-carousel').on('initialized.owl.carousel', function (event) {
+  $("#welcome-slider-timer").css("width", "0").animate(
     {
       width: `100%`,
     },
@@ -122,22 +123,53 @@ $(".V_slider").on("init.slick", function (event, slick) {
   );
 });
 
-$(".V_slider").slick({
-  vertical: true,
-  verticalSwiping: true,
+$('.welcome-carousel').owlCarousel({
+  loop: true,
+  items: 1,
+  center: true,
+  nav: false,
   dots: true,
-  arrows: false,
-  cssEase: "linear",
   autoplay: true,
-  autoplaySpeed: 3000,
-  draggable: true,
-  slidesToShow: 1,
-  touchMove: true,
-  margin: "auto",
-  customPaging: function (slider, i) {
-    return '<div class="pager__item" id=' + i + ">___</div>";
-  },
+  autoplayTimeout: 3000,
+  autoplayHoverPause: true
 });
+
+$('.welcome-carousel').on('changed.owl.carousel', function (event) {
+  let item = event.item.index;
+  let text = $(`.welcome-carousel .owl-item`).eq(item).children(".welcome-item").attr("data-value");
+  $("#welcome-slider-text").text("");
+  $("#welcome-slider-timer").css("width", "0px");
+  $("#welcome-slider-timer").animate(
+    {
+      width: `100%`,
+    },
+    2800
+  );
+  typeInit(
+    text,
+    "welcome-slider-text"
+  );
+  $(".first-section").attr(
+    "data-before",
+    text.toUpperCase()
+  );
+
+});
+
+
+$('.first-section').on('mousewheel', '.welcome-carousel .owl-stage', function (e) {
+  if (welcomeSlides > 0) {
+    if (e.deltaY > 0) {
+      $('.welcome-carousel').trigger('next.owl');
+    } else {
+      $('.welcome-carousel').trigger('prev.owl');
+    }
+    e.preventDefault();
+    welcomeSlides--;
+  }
+});
+
+// End of welcome carousel
 
 // third section carousel
 
@@ -151,7 +183,6 @@ $('.website-carousel').owlCarousel({
   onDragged: callback
 })
 function callback(event) {
-  // Provided by the core
   var item = event.item.index;
   let src = $(`.website-carousel .owl-item`).eq(item - 1).children(".website-img").children("img").attr("src");
   $("#larger-img").attr("src", src);
@@ -225,24 +256,6 @@ function commentsCallback(event) {
 
 // End comments section carousel
 
-
-$(".V_slider").on("afterChange", function (event, slick, currentSlide) {
-  $("#welcome-slider-text").text("");
-  typeInit(
-    `${$(slick.$slides.get(currentSlide)).attr("data-value")}`,
-    "welcome-slider-text"
-  );
-  $(".first-section").attr(
-    "data-before",
-    $(slick.$slides.get(currentSlide)).attr("data-value").toUpperCase()
-  );
-  $("#welcome-slider-timer").css("width", "0").animate(
-    {
-      width: `100%`,
-    },
-    3000
-  );
-});
 
 // teamMate start
 
