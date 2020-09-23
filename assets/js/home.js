@@ -255,31 +255,16 @@ function commentsCallback(event) {
 
 
 // teamMate start
+var sourceSwap = function () {
+  var $this = $(this).children("img");
+  var newSource = $this.data('alt-src');
+  $this.data('alt-src', $this.attr('src'));
+  $this.attr('src', newSource);
+}
 
-// $(".teamMate-container").hover((e)=>{
-
-//     $(e.target).children("img").attr("src", `/assets/images/teamMates/${secondImg}`);
-// });
-let firstImg;
-let secondImg;
-let hoverMate;
-$(".teamMate-container").hover(
-  function () {
-    hoverMate = $(this).children("img");
-    firstImg = $(this).children("img").attr("src");
-    secondImg = $(this).attr("data-secImg");
-    hoverMate.fadeOut(200, function () {
-      hoverMate.attr("src", `/assets/images/teamMates/${secondImg}`);
-      hoverMate.fadeIn(200);
-    });
-  },
-  function () {
-    hoverMate.fadeOut(200, function () {
-      hoverMate.attr("src", firstImg);
-      hoverMate.fadeIn(200);
-    });
-  }
-);
+$(function () {
+  $('.teamMate-container').hover(sourceSwap, sourceSwap);
+});
 
 // end of team mate
 
