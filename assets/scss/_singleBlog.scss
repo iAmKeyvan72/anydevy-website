@@ -6,6 +6,7 @@
     }
   }
   .singleBlog-container {
+    margin-top: -5px;
     padding: 20px 5% 100px;
     .container {
       .singleBlog-title {
@@ -27,8 +28,8 @@
         }
       }
 
-      .singleBlog-contents {
-      }
+      // .singleBlog-contents {
+      // }
 
       .free-quote {
         text-align: center;
@@ -56,6 +57,11 @@
         max-width: 800px;
         @include flex(space-between, center);
         flex-wrap: wrap;
+
+        a {
+          display: contents;
+          
+        }
         .previous-post,
         .next-post {
           width: 50%;
@@ -180,14 +186,15 @@
           z-index: 2;
 
           .opinionComment {
-            @include flex(center, center);
+            @include flex(center, flex-end);
             flex-direction: column;
+            max-width: 600px;
+            margin: 30px auto 0;
 
             .opinion {
               background-color: #f5f5f5;
               padding: 20px;
               border-radius: 15px;
-              margin-top: 20px;
               max-width: 600px;
 
               .opinion-header {
@@ -195,7 +202,7 @@
                 margin-bottom: 10px;
 
                 .opinion-writer {
-                    color: #252A34;
+                  color: #252a34;
                   .opinion-writer-name {
                     font-size: 16px;
                     font-weight: 600;
@@ -218,12 +225,22 @@
               }
             }
 
-            .opinion-answers{
-                border-left: 3px dashed rgba($light-blue, 1);
+            .opinion-answers {
+              border-left: 3px dashed rgba($light-blue, 1);
+              margin-top: 30px;
+              width: 95%;
+              right: 0;
+              max-width: 600px;
 
+              .opinion {
+                width: 98%;
+                margin-top: 10px;
+                float: right;
 
-                
-                
+                &:nth-child(1) {
+                  margin-top: 0;
+                }
+              }
             }
           }
         }
