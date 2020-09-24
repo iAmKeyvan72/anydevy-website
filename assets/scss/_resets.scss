@@ -56,6 +56,59 @@ body {
   line-height: 0.9;
 }
 
+.error-message {
+  color: red;
+  font-size: 14px;
+  text-align: center;
+  margin: 20px 0;
+}
+
+.alert-modal {
+  position: fixed;
+  display: none;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 15px;
+  padding: 20px 10px 40px;
+  width: 80%;
+  max-width: 350px;
+  text-align: center;
+  z-index: 9999999;
+
+  &.success {
+    background-color: $light-blue;
+    color: $dark-gray;
+  }
+
+  &.error {
+    background-color: $pink;
+    color: #fff;
+  }
+
+  .alert-icon{
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    overflow: hidden;
+    background-color: $dark-gray;
+    border-radius: 5px;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .alert-message {
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+    width: 80%;
+    margin: 20px auto 0;
+  }
+}
+
 .btn-pink {
   background-color: $pink;
   color: #fff;
@@ -364,7 +417,7 @@ body {
       .technologies {
         img {
           width: 12.2%;
-          max-width: 50px;
+          max-width: 40px;
           margin: 30px 15px 0;
           fill: $light-blue;
         }
@@ -373,12 +426,12 @@ body {
   }
 
   .business-card {
-    width: 80%;
+    width: 95%;
     margin-top: 40px;
     padding: 0;
   
     img {
-      width: 60px;
+      width: 40px;
       margin-right: 10px;
     }
   

@@ -5,6 +5,13 @@
 }
 
 /* first section */
+.mobile {
+  display: none;
+}
+
+.desktop {
+  display: block;
+}
 
 .home {
   .first-section {
@@ -56,13 +63,16 @@
       }
     }
 
+    .welcome-mobile-slider {
+      display: none;
+    }
+
     .welcome-slider {
       width: 30%;
       .welcome-carousel-box {
-  
         transform: rotate(-90deg);
       }
-      .welcome-carousel  {
+      .welcome-carousel {
         width: 100%;
         height: 100%;
       }
@@ -72,13 +82,13 @@
         transform: rotate(90deg);
         border-radius: 20px;
       }
-  
+
       .welcome-carousel .owl-dots {
         text-align: center;
         margin-top: 10px;
         transform: rotate(180deg);
       }
-      .welcome-carousel .owl-dots .owl-dot{
+      .welcome-carousel .owl-dots .owl-dot {
         height: 2px;
         width: 15px;
         margin: 10px;
@@ -86,8 +96,8 @@
         position: relative;
         z-index: 999999;
       }
-  
-      .welcome-carousel .owl-dots .owl-dot.active{
+
+      .welcome-carousel .owl-dots .owl-dot.active {
         outline: none;
         background-color: $light-blue;
       }
@@ -483,7 +493,6 @@
 }
 
 @media only screen and (max-width: 990px) {
-
   .home .first-section .welcome-text-container {
     .welcome-hi {
       font-size: 18px;
@@ -492,7 +501,6 @@
     .welcome-desc {
       font-size: 30px;
     }
-
   }
 
   .home .third-section {
@@ -523,6 +531,13 @@
 }
 
 @media only screen and (max-width: 768px) {
+  .mobile {
+    display: block;
+  }
+
+  .desktop {
+    display: none;
+  }
   .home {
     .first-section {
       display: block;
@@ -530,12 +545,15 @@
       align-items: unset;
       padding-top: 50px;
 
+      &::before {
+        content: attr(data-Mobilebefore);
+      }
+
       .welcome {
         flex-direction: column;
       }
-  
-      .welcome-text-container {
 
+      .welcome-text-container {
         .welcome-hi {
           font-size: 18px;
         }
@@ -544,26 +562,30 @@
           font-size: 26px;
           line-height: 1.1;
         }
-  
+
         .slider-text {
           position: relative;
-  
+
           #welcome-slider-text {
             padding-right: 20px;
           }
-  
+
           .slider-timer {
             position: absolute;
             bottom: -5px;
           }
         }
       }
-  
-      .welcome-slider-mobile {
+
+      .welcome-slider {
+        display: none;
+      }
+
+      .welcome-mobile-slider {
+        display: block;
         margin-top: 40px;
 
-        .welcome-mobile-carousel  {
-  
+        .welcome-mobile-carousel {
           .welcome-item {
             transform: scale(0.8);
             img {
@@ -572,9 +594,7 @@
               border-radius: 20px;
             }
           }
-
         }
-    
       }
       .welcome-btn {
         max-width: 150px;
@@ -586,40 +606,39 @@
     .second-section {
       padding: 130px 0 50px;
 
-      .container{
+      .container {
         padding: 0 5px;
       }
 
       .solution {
         width: 33%;
         margin: 30px 0;
-  
+
         &-icon-box {
           max-width: 40px;
           margin: 0 auto;
-  
+
           img {
             width: 100%;
           }
         }
-  
+
         &-title {
           margin-top: 15px;
           text-transform: capitalize;
           font-size: 13px;
         }
       }
-
     }
 
     .third-section {
       padding: 130px 0 100px;
       position: relative;
-  
+
       .container {
         display: block;
       }
-  
+
       .big-circle {
         width: 70px;
         height: 70px;
@@ -627,41 +646,41 @@
         right: -30px;
         animation: topToBottomMobile 20s linear infinite;
       }
-  
+
       .small-circle {
         left: 20px;
         animation: bottomToTopMobile 8s linear 1s infinite;
-  
+
         &::before {
           content: "";
           width: 20px;
           height: 20px;
         }
       }
-  
+
       .website-mobile-carousel {
         margin-top: 30px;
         position: relative;
         z-index: 9;
         width: 98%;
         margin-left: 2%;
-  
+
         .website-img {
           transform: scale(0.8);
           width: 100%;
-  
+
           img {
             border-radius: 15px;
           }
         }
       }
-  
+
       .website-details {
         margin-top: 10px;
         text-align: left;
         z-index: 9;
         padding: 0 25px;
-  
+
         .see-more {
           width: 100px;
           min-width: unset;
@@ -708,7 +727,6 @@
         .mobile-app {
           position: relative;
           max-width: 250px;
-          position: relative;
           margin: 15px 0;
         }
       }
@@ -719,7 +737,7 @@
       .branding-container {
         display: block;
         padding: 0;
-  
+
         .brand {
           width: 90%;
           margin: 0 auto;
@@ -732,34 +750,34 @@
         .bottom-brand {
           top: -50px;
         }
-  
+
         .brand-text {
           position: absolute;
           top: 20px;
           left: 20px;
           z-index: 9;
-          margin : 0;
-  
+          margin: 0;
+
           .brand-title {
             font-weight: 900;
             font-size: 18px;
           }
-  
+
           .brand-year {
             margin-top: 5px;
             color: #aaa;
           }
         }
-  
+
         .brand-image {
           width: 100%;
-  
+
           img {
             border-radius: 25px;
           }
         }
       }
-  
+
       .branding-works {
         text-align: center;
         padding: 0 45px;
@@ -771,8 +789,8 @@
 
     .othersSiad-section {
       padding: 160px 0;
-  
-      .comments-carousel {
+
+      .comments-mobile-carousel {
         width: 98%;
         margin-left: 2%;
         .owl-stage {
@@ -780,21 +798,21 @@
           align-items: center;
         }
       }
-  
+
       .comment-box {
         display: block;
-  
+
         .user-icon-box {
           width: 40px;
           height: 40px;
         }
-  
+
         .comment {
           width: auto;
           color: #000;
-          @include flex (flex-start, center);
+          @include flex(flex-start, center);
           margin-bottom: 15px;
-  
+
           .user-name {
             font-size: 16px;
           }
@@ -802,7 +820,6 @@
           .user-job {
             margin: 5px 0;
           }
-          
         }
 
         .comment-text {
@@ -815,7 +832,7 @@
 
     .ourTeam-section {
       padding: 150px 0 100px;
-  
+
       .team-container {
         .teamMate-container,
         .joinTeam-container {
@@ -823,12 +840,12 @@
           max-width: 200px;
           padding: 30px 0;
           margin: 5px 0px;
-  
+
           img {
             max-width: 70px;
             height: auto;
           }
-  
+
           .teamMate-name {
             font-size: 16px;
           }
@@ -838,7 +855,7 @@
 
     .learning-section {
       padding: 150px 0;
-  
+
       .learning-container {
         .learning-blog {
           text-align: center;
@@ -847,13 +864,13 @@
 
         .learning-contents {
           display: block;
-  
+
           .learning-item {
             width: 90%;
             margin: 0 auto;
             opacity: 0;
             position: relative;
-  
+
             &:nth-child(2) {
               margin-top: 10px;
             }
@@ -867,13 +884,13 @@
               bottom: 20px;
               left: 15px;
             }
-  
+
             .learning-title {
               font-size: 18px;
               color: #fff;
             }
 
-            .learning-desc{
+            .learning-desc {
               color: #e8e8e8;
               font-size: 14px;
             }

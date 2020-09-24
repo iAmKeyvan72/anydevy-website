@@ -1,50 +1,111 @@
 .projects {
   .projects-section {
-    // .projects-section-header {
-    // }
+    padding: 150px 5% 100px;
     .container {
       .projects-container {
-        img {
-          max-width: 100%;
-          vertical-align: middle;
-          border-radius: 10px;
+        
+        /* ---- grid ---- */
+        
+        .grid {
+          max-width: 1024px;
+          margin: 30px auto 0;
         }
-
-        /* Masonry grid */
-        .masonry {
-          transition: all 0.5s ease-in-out;
-          column-gap: 10px;
-          column-fill: initial;
+        
+        /* clearfix */
+        .grid:after {
+          content: '';
+          display: block;
+          clear: both;
         }
+        
+        /* ---- grid-item ---- */
+        
+        .grid-sizer,
+        .grid-item {
+          width: 24%;
+        }
+        
+        .gutter-sizer { width: 1%; }
 
-        /* Masonry item */
-        .masonry .brick {
+        .grid-item {
+          height: 200px;
+          float: left;
+          border-radius: 5px;
           margin-bottom: 10px;
-          display: inline-block; /* Fix the misalignment of items */
-          vertical-align: top; /* Keep the item on the very top */
         }
 
-        /* Masonry image effects */
-        .masonry .brick img {
-          transition: all 0.5s ease-in-out;
-          backface-visibility: hidden; /* Remove Image flickering on hover */
+        .grid-item img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          border-radius: 15px;
         }
+        
+        .grid-item--width2 { width:  49%; }
+        .grid-item--width3 { width:  74%; }
+        .grid-item--width4 { width:  99%; }
+        
+        .grid-item--height2 { height: 400px; }
+        .grid-item--height3 { height: 600px; }
+        .grid-item--height4 { height: 800px; }
+        
+      }
+    }
+  }
+}
 
-        .masonry .brick:hover img {
-          opacity: 0.75;
-        }
+@media only screen and (max-width: 768px) {
+  .projects {
+    .projects-section {
+      padding: 100px 5% 100px;
+      .container {
+        .projects-container {
 
-        /* Masonry on tablets */
-        @media only screen and (min-width: 800px) {
-          .masonry {
-            column-count: 3;
+          .grid {
+            width: 80%;
           }
-        }
-
-        @media only screen and (max-width: 800px) {
-          .masonry {
-            column-count: 2;
+  
+          .grid-item {
+            height: 150px;
           }
+  
+          .grid-item img {
+            display: block;
+            width: 100%;
+            height: 100%;
+          }
+          
+          .grid-sizer,
+          .grid-item {
+            width: 49%;
+          }
+          
+          .gutter-sizer { width: 1%; }
+          
+          .grid-item--width2 { width:  100%; }
+          .grid-item--width3 { width:  100%; }
+          .grid-item--width4 { width:  100%; }
+          
+          .grid-item--height2 { height: 300px; }
+          .grid-item--height3 { height: 600px; }
+          .grid-item--height4 { height: 900px; }
+          
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .projects {
+    .projects-section {
+      .container {
+        .projects-container {
+
+          .grid {
+            width: 100%;
+          }
+          
         }
       }
     }

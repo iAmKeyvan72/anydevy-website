@@ -41,12 +41,11 @@ function typeWriter() {
   }
 }
 
-$(window).on("resize scroll", function () {
+$(window).on("resize scroll load", function () {
   if ($(".dark-bg").isInTop()) {
     $(".menu-toggle").removeClass("dark");
     $(".new-quote-btn").removeClass("btn-blue").addClass("btn-pink");
-  }
-  if ($(".light-bg").isInTop() || $(".white-bg").isInTop()) {
+  } else {
     $(".menu-toggle").addClass("dark");
     $(".new-quote-btn").removeClass("btn-pink").addClass("btn-blue");
   }
@@ -85,3 +84,13 @@ $(".input-effect input").focusout(function () {
 });
 
 // end of footer input
+
+// alert modal closing
+
+$(window).on("click", function (e) {
+  if (!$(e.target).hasClass("alert-modal")) {
+    $(".alert-modal").fadeOut();
+  }
+});
+
+// end of alert modal closing

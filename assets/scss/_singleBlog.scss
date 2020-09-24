@@ -60,7 +60,6 @@
 
         a {
           display: contents;
-          
         }
         .previous-post,
         .next-post {
@@ -146,6 +145,7 @@
         .postComment-form {
           max-width: 420px;
           margin: auto;
+          position: relative;
 
           .postComment-input {
             display: block;
@@ -239,6 +239,166 @@
 
                 &:nth-child(1) {
                   margin-top: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .single-blog {
+    .singleBlog-banner {
+      img {
+        min-height: 50vh;
+      }
+    }
+
+    .singleBlog-container {
+      padding: 20px 3% 20px;
+      .container {
+        .singleBlog-title {
+          margin-bottom: 30px;
+          h1 {
+            font-size: 22px;
+            margin-bottom: 10px;
+          }
+          div {
+            flex-direction: column;
+            align-items: flex-start;
+            .singleBlog-tag {
+              font-size: 16px;
+              margin-bottom: 5px;
+            }
+  
+            .singleBlog-date {
+              font-size: 16px;
+            }
+          }
+        }
+  
+        .free-quote {
+  
+          p {
+            font-size: 16px;
+            font-weight: 500;
+            font-style: normal;
+          }
+  
+          .freeQuote-btn {
+            width: 200px;
+          }
+        }
+  
+        .postNav-container {
+          flex-direction: column;
+          margin-bottom: 20px;
+
+          .previous-post,
+          .next-post {
+            width: 95%;
+            margin-bottom: 15px;
+            max-width: 350px;
+            position: relative;
+  
+            .post-desc {
+              width: 100%;
+              top: 50% !important;
+              left: 50% !important;
+              transform: translate(-50%,-50%) !important;
+              text-align: center;
+  
+              .post-nav {
+                font-style: italic;
+              }
+  
+              .post-title {
+                font-weight: 600;
+              }
+            }
+          }
+        }
+  
+        .postComment-container {
+          padding: 50px 0;
+  
+          .postComment-header {
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 1;
+            .postComment-title {
+              font-size: 20px;
+              font-style: italic;
+            }
+            .postCommnet-desc {
+              font-size: 14px;
+            }
+          }
+        }
+  
+        .opinion-section {
+          padding: 90px 0px;
+          .opinionComment-container {
+  
+            .opinionComment {
+              margin: 20px auto 0;
+  
+              .opinion {
+                background-color: #f5f5f5;
+                padding: 20px;
+                border-radius: 15px;
+                max-width: 600px;
+  
+                .opinion-header {
+                  @include flex(space-between, center);
+                  margin-bottom: 10px;
+
+                  .opinion-writer {
+                    color: #252a34;
+                    .opinion-writer-name {
+                      font-size: 16px;
+                      font-weight: 600;
+                      color: #333;
+                    }
+                  }
+  
+                  .opinionReply-btn {
+                    max-width: 60px;
+                    width: 100%;
+                    border-radius: 3px;
+                    padding: 2px;
+                    transition: 0.4s;
+                    font-size: 12px;
+                    &:hover {
+                      box-shadow: $light-blue;
+                      box-shadow: 0 0 5px 3px rgba($light-blue, 0.4);
+                    }
+                  }
+                }
+
+                .opinion-text{
+                  font-size: 12px;
+                }
+              }
+  
+              .opinion-answers {
+                border-left: 3px dashed rgba($light-blue, 1);
+                margin-top: 30px;
+                width: 95%;
+                right: 0;
+                max-width: 600px;
+  
+                .opinion {
+                  width: 98%;
+                  margin-top: 10px;
+                  float: right;
+  
+                  &:nth-child(1) {
+                    margin-top: 0;
+                  }
                 }
               }
             }

@@ -51,7 +51,7 @@
             box-shadow: -20px 20px 40px rgba($dark-gray, 0.1);
             margin: -350px auto 0;
             background-color: $light-gray;
-            padding: 50px 5% 30px;
+            padding: 50px 5% 50px;
             text-align: center;
         }
 
@@ -186,7 +186,7 @@
 
 
             .joinUs-submit {
-                margin: 50px auto;
+                margin: 50px auto 0;
                 max-width: 320px;
                 border-radius: 5px;
             }
@@ -248,3 +248,4 @@
     
     }
 }
+
