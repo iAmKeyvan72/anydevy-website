@@ -43,7 +43,7 @@ a {
 html,
 body {
   overflow-x: hidden;
-  font-family: PTSans;
+  font-family: "PT Sans", sans-serif;
   scroll-behavior: smooth;
 }
 
@@ -2562,6 +2562,7 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+  text-transform: uppercase;
 }
 
 .single-services .start-section .start-contents {
