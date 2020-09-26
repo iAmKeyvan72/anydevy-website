@@ -14,28 +14,28 @@
 
 <body>
 <header>
+	<button class="menu-toggle">
+       <span class="bar"></span>
+    </button>
     <nav class="navbar">
-        <button class="menu-toggle">
-            <span class="bar"></span>
-        </button>
         <ul class="navbar-list">
             <li class="navbar-item">
-                <a class="navbar-link" href="<?php echo site_url(); ?>">Home</a>
+                <a class="navbar-link" data-text="Home" href="<?php echo site_url(); ?>">Home</a>
             </li>
             <li class="navbar-item">
-                <a class="navbar-link" href="<?php echo site_url('/projects'); ?>">Projects</a>
+                <a class="navbar-link" data-text="Projects" href="<?php echo site_url('/projects'); ?>">Projects</a>
             </li>
             <li class="navbar-item">
-                <a class="navbar-link" href="<?php echo site_url('/services'); ?>">Services</a>
+                <a class="navbar-link" data-text="Services" href="<?php echo site_url('/services'); ?>">Services</a>
             </li>
             <li class="navbar-item">
-                <a class="navbar-link" href="<?php echo site_url('/solutions'); ?>">Solutions</a>
+                <a class="navbar-link" data-text="Solutions" href="<?php echo site_url('/solutions'); ?>">Solutions</a>
             </li>
             <li class="navbar-item">
-                <a class="navbar-link" href="<?php echo site_url('/blog'); ?>">Blog</a>
+                <a class="navbar-link" data-text="Blog" href="<?php echo site_url('/blog'); ?>">Blog</a>
             </li>
             <li class="navbar-item">
-                <a class="navbar-link" href="#footer">Contact Us</a>
+                <a class="navbar-link" data-text="Contact Us" href="#footer">Contact Us</a>
             </li>
         </ul>
     </nav>
