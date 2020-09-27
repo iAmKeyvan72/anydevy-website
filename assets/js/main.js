@@ -68,7 +68,7 @@ $(window).on("resize scroll load", function () {
 });
 
 $(".menu-toggle").on("click", () => {
-  $(".navbar-list").toggleClass("open");
+  $(".navbar").toggleClass("open");
   $(".menu-toggle").toggleClass("open");
 });
 
