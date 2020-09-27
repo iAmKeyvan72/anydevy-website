@@ -1023,9 +1023,9 @@ header .menu-toggle.dark .bar::before, header .menu-toggle.dark .bar::after {
   -webkit-box-pack: space-evenly;
   -ms-flex-pack: space-evenly;
   justify-content: space-evenly;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: flex-start;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
@@ -1038,6 +1038,11 @@ header .menu-toggle.dark .bar::before, header .menu-toggle.dark .bar::after {
   position: relative;
   z-index: 99;
 }
+
+.home .second-section .solution:last-child{
+	align-self:center
+}
+
 
 .home .second-section .solution-icon-box {
   max-width: 50px;
@@ -1055,6 +1060,7 @@ header .menu-toggle.dark .bar::before, header .menu-toggle.dark .bar::after {
 .home .second-section .solution-title {
   margin-top: 15px;
   text-transform: capitalize;
+  display: inline-block;
 }
 
 .home .third-section {
@@ -1493,6 +1499,7 @@ header .menu-toggle.dark .bar::before, header .menu-toggle.dark .bar::after {
   font-size: 22px;
   margin: 15px 0 10px;
   font-weight: 600;
+  display: inline-block;	  
 }
 
 .home
@@ -1618,6 +1625,11 @@ header .menu-toggle.dark .bar::before, header .menu-toggle.dark .bar::after {
     width: 33%;
     margin: 30px 0;
   }
+	
+  .home .second-section .container:last-child{
+   align-self: center;
+  }
+	
   .home .second-section .solution-icon-box {
     max-width: 40px;
     margin: 0 auto;
