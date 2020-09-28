@@ -202,9 +202,12 @@ $(".website-carousel").owlCarousel({
   autoplayTimeout: 5000,
   nav: false,
   dots: false,
-  onDragged: callback,
+  onDragged: websiteCallback,
 });
-function callback(event) {
+$(".website-carousel").on("changed.owl.carousel", function (event) {
+  websiteCallback(event);
+});
+function websiteCallback(event) {
   var item = event.item.index;
   let src = $(`.website-carousel .owl-item`)
     .eq(item - 1)
@@ -261,6 +264,10 @@ $(".website-mobile-carousel").owlCarousel({
   nav: false,
   dots: false,
   onDragged: websiteMobileCallback,
+});
+
+$(".website-mobile-carousel").on("changed.owl.carousel", function (event) {
+  websiteMobileCallback(event);
 });
 
 function websiteMobileCallback(event) {
@@ -348,12 +355,17 @@ $(".comments-carousel").owlCarousel({
   loop: true,
   items: 2,
   margin: 100,
-	  autoplay: true,
+  autoplay: true,
   autoplayTimeout: 4000,
   nav: false,
   dots: false,
   onDragged: commentsCallback,
 });
+
+$(".comments-carousel").on("changed.owl.carousel", function (event) {
+  commentsCallback(event);
+});
+
 function commentsCallback(event) {
   let current = event.item.index;
   $(`.comments-carousel .comment-box`)
@@ -387,9 +399,14 @@ $(".comments-mobile-carousel").owlCarousel({
   autoplayTimeout: 4000,
   nav: false,
   dots: false,
-  onDragged: commentsCallback,
+  onDragged: commentsMobileCallback,
 });
-function commentsCallback(event) {
+
+$(".comments-mobile-carousel").on("changed.owl.carousel", function (event) {
+  commentsMobileCallback(event);
+});
+
+function commentsMobileCallback(event) {
   let current = event.item.index;
   $(`.comments-mobile-carousel .comment-box`)
     .eq(current + 1)
